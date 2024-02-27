@@ -58,4 +58,10 @@
 // const language = 'Lithuanian';
 
 // Exponential
-console.log(2 ** 3);
+// console.log(2 ** 3);
+
+const now = 2037;
+const ageEd = now - 2005;
+const ageDD = now - 2008;
+
+console.log(now - 1991 > now - 2018);
