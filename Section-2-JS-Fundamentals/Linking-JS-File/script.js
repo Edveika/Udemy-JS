@@ -60,8 +60,28 @@
 // Exponential
 // console.log(2 ** 3);
 
-const now = 2037;
-const ageEd = now - 2005;
-const ageDD = now - 2008;
+// const now = 2037;
+// const ageEd = now - 2005;
+// const ageDD = now - 2008;
 
-console.log(now - 1991 > now - 2018);
+// console.log(now - 1991 > now - 2018);
+
+//
+// # Challange
+//
+
+/* Write your code below. Good luck! 🙂 */
+let massMark = 78;
+let heightMark = 1.69;
+const BMIMark = massMark / (heightMark * heightMark);
+let markHigherBMI = false;
+
+let massJohn = 92;
+let heightJohn = 1.95;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(BMIMark, BMIJohn);
+
+if (BMIMark > BMIJohn) markHigherBMI = true;
+
+console.log(markHigherBMI);
