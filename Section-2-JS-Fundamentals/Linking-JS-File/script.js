@@ -15,3 +15,21 @@ jsIsFun = 'actually, it is quite fun!';
 
 // Type is now going to be a string
 console.log(typeof jsIsFun);
+
+//
+// Homework - data types
+//
+
+// let country = 'Lithuania';
+// let continent = 'Europe';
+// let population = 3;
+// let isIsland = false;
+// let language;
+
+// console.log(typeof country);
+// console.log(typeof continent);
+// console.log(typeof population);
+// console.log(typeof isIsland);
+// console.log(typeof language);
+
+//
