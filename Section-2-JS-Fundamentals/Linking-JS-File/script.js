@@ -1,20 +1,20 @@
-let js = 'amazing';
-if (js == 'amazing') alert('javascript is amazing');
-else alert('javascript is not amazing');
+// let js = 'amazing';
+// if (js == 'amazing') alert('javascript is amazing');
+// else alert('javascript is not amazing');
 
-console.log(2 + 2);
+// console.log(2 + 2);
 
-// Variable holds boolean value
-let jsIsFun = false;
+// // Variable holds boolean value
+// let jsIsFun = false;
 
-// Type is going to be a boolean
-console.log(typeof jsIsFun);
+// // Type is going to be a boolean
+// console.log(typeof jsIsFun);
 
-// Changes variable value and type to string
-jsIsFun = 'actually, it is quite fun!';
+// // Changes variable value and type to string
+// jsIsFun = 'actually, it is quite fun!';
 
-// Type is now going to be a string
-console.log(typeof jsIsFun);
+// // Type is now going to be a string
+// console.log(typeof jsIsFun);
 
 //
 // Homework - data types
@@ -33,3 +33,16 @@ console.log(typeof jsIsFun);
 // console.log(typeof language);
 
 //
+
+// Age can change
+let age = 30;
+++age;
+
+// Birth cannot, hence why its a const
+const birth = 1991;
+
+// var is function scoped
+// let is block scoped\
+// no variable type is global scoped
+var job = 'biologist';
+job = 'chemist';
