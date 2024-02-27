@@ -34,15 +34,25 @@
 
 //
 
-// Age can change
-let age = 30;
-++age;
+// // Age can change
+// let age = 30;
+// ++age;
 
-// Birth cannot, hence why its a const
-const birth = 1991;
+// // Birth cannot, hence why its a const
+// const birth = 1991;
 
-// var is function scoped
-// let is block scoped\
-// no variable type is global scoped
-var job = 'biologist';
-job = 'chemist';
+// // var is function scoped
+// // let is block scoped\
+// // no variable type is global scoped
+// var job = 'biologist';
+// job = 'chemist';
+
+//
+// Homework - let, const, var
+//
+
+// const country = 'Lithuania';
+// const continent = 'Europe';
+// let population = 3;
+// const isIsland = false;
+// const language = 'Lithuanian';
