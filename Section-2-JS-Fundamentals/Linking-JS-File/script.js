@@ -56,3 +56,6 @@
 // let population = 3;
 // const isIsland = false;
 // const language = 'Lithuanian';
+
+// Exponential
+console.log(2 ** 3);
