@@ -86,11 +86,34 @@
 
 // console.log(markHigherBMI);
 
-let name = 'Edvinas';
-let job = 'Programmer';
-let age = 1337;
+// let name = 'Edvinas';
+// let job = 'Programmer';
+// let age = 1337;
 
-// Template string
-const edvinas = `My name is ${name}, I am a ${job} and I am ${age} years old`;
+// // Template string
+// const edvinas = `My name is ${name}, I am a ${job} and I am ${age} years old`;
 
-console.log(edvinas);
+// console.log(edvinas);
+
+//
+// # Challange: BMI #2
+//
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+/* Write your code below. Good luck! 🙂 */
+
+if (BMIMark > BMIJohn) {
+  console.log("Mark's BMI is higher than John's!");
+} else if (BMIMark < BMIJohn) {
+  console.log("John's BMI is higher than Mark's!");
+} else {
+  console.log('equal');
+}
