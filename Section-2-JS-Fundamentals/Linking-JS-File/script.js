@@ -71,17 +71,26 @@
 //
 
 /* Write your code below. Good luck! 🙂 */
-let massMark = 78;
-let heightMark = 1.69;
-const BMIMark = massMark / (heightMark * heightMark);
-let markHigherBMI = false;
+// let massMark = 78;
+// let heightMark = 1.69;
+// const BMIMark = massMark / (heightMark * heightMark);
+// let markHigherBMI = false;
 
-let massJohn = 92;
-let heightJohn = 1.95;
-const BMIJohn = massJohn / (heightJohn * heightJohn);
+// let massJohn = 92;
+// let heightJohn = 1.95;
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
 
-console.log(BMIMark, BMIJohn);
+// console.log(BMIMark, BMIJohn);
 
-if (BMIMark > BMIJohn) markHigherBMI = true;
+// if (BMIMark > BMIJohn) markHigherBMI = true;
 
-console.log(markHigherBMI);
+// console.log(markHigherBMI);
+
+let name = 'Edvinas';
+let job = 'Programmer';
+let age = 1337;
+
+// Template string
+const edvinas = `My name is ${name}, I am a ${job} and I am ${age} years old`;
+
+console.log(edvinas);
