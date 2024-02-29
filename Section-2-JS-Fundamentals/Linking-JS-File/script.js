@@ -131,9 +131,14 @@
 
 // JS false values: 0, "", NaN, NULL, undefined
 // Everything else: TRUE
-console.log(Boolean(false));
-console.log(Boolean(0));
-console.log(Boolean(NaN));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean(''));
+// console.log(Boolean(false));
+// console.log(Boolean(0));
+// console.log(Boolean(NaN));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean(''));
+
+const value = Number(prompt('Input some number'));
+
+if (value === 1337) alert('You a real codah');
+else alert(`${value} is a cool number`);
