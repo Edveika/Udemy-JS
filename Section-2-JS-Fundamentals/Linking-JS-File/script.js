@@ -99,21 +99,32 @@
 // # Challange: BMI #2
 //
 
-const massMark = 78;
-const heightMark = 1.69;
-const massJohn = 92;
-const heightJohn = 1.95;
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
 
-const BMIMark = massMark / (heightMark * heightMark);
-const BMIJohn = massJohn / (heightJohn * heightJohn);
-console.log(BMIMark, BMIJohn);
+// const BMIMark = massMark / (heightMark * heightMark);
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
+// console.log(BMIMark, BMIJohn);
 
-/* Write your code below. Good luck! 🙂 */
+// /* Write your code below. Good luck! 🙂 */
 
-if (BMIMark > BMIJohn) {
-  console.log("Mark's BMI is higher than John's!");
-} else if (BMIMark < BMIJohn) {
-  console.log("John's BMI is higher than Mark's!");
-} else {
-  console.log('equal');
-}
+// if (BMIMark > BMIJohn) {
+//   console.log("Mark's BMI is higher than John's!");
+// } else if (BMIMark < BMIJohn) {
+//   console.log("John's BMI is higher than Mark's!");
+// } else {
+//   console.log('equal');
+// }
+
+const year = '1999';
+
+// Type conversion from str to number
+let number = Number(year);
+
+// Strings get converted into numbers
+console.log('10' - '5' - 3);
+
+// Numbers get converted into strings
+console.log('10' + '5' + 3);
