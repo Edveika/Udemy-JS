@@ -138,7 +138,20 @@
 // console.log(Boolean(null));
 // console.log(Boolean(''));
 
-const value = Number(prompt('Input some number'));
+// const value = Number(prompt('Input some number'));
 
-if (value === 1337) alert('You a real codah');
-else alert(`${value} is a cool number`);
+// if (value === 1337) alert('You a real codah');
+// else alert(`${value} is a cool number`);
+
+//
+// CHallange #3
+//
+
+/* Write your code below. Good luck! 🙂 */
+
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+if (scoreDolphins > scoreKoalas) console.log('Dolphins win the trophy');
+else if (scoreDolphins < scoreKoalas) console.log('Koalas win the trophy');
+else console.log('Both win the trophy');
