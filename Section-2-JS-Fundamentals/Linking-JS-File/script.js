@@ -118,13 +118,22 @@
 //   console.log('equal');
 // }
 
-const year = '1999';
+// const year = '1999';
 
-// Type conversion from str to number
-let number = Number(year);
+// // Type conversion from str to number
+// let number = Number(year);
 
-// Strings get converted into numbers
-console.log('10' - '5' - 3);
+// // Strings get converted into numbers
+// console.log('10' - '5' - 3);
 
-// Numbers get converted into strings
-console.log('10' + '5' + 3);
+// // Numbers get converted into strings
+// console.log('10' + '5' + 3);
+
+// JS false values: 0, "", NaN, NULL, undefined
+// Everything else: TRUE
+console.log(Boolean(false));
+console.log(Boolean(0));
+console.log(Boolean(NaN));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(''));
