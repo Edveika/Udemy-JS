@@ -149,9 +149,19 @@
 
 /* Write your code below. Good luck! 🙂 */
 
-const scoreDolphins = (96 + 108 + 89) / 3;
-const scoreKoalas = (88 + 91 + 110) / 3;
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
 
-if (scoreDolphins > scoreKoalas) console.log('Dolphins win the trophy');
-else if (scoreDolphins < scoreKoalas) console.log('Koalas win the trophy');
-else console.log('Both win the trophy');
+// if (scoreDolphins > scoreKoalas) console.log('Dolphins win the trophy');
+// else if (scoreDolphins < scoreKoalas) console.log('Koalas win the trophy');
+// else console.log('Both win the trophy');
+
+//
+// Challange #4
+//
+const bill = 275;
+let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
