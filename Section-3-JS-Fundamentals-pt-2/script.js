@@ -14,3 +14,11 @@ function logger(text) {
 }
 
 logger('My name is Edvinas');
+
+// Function expression
+const calcAge = function (birthYear) {
+  return 2077 - birthYear;
+};
+
+const curAge = calcAge(1991);
+console.log(curAge);
