@@ -41,26 +41,58 @@
 //
 // Challange #1
 //
-function calcAverage(score0, score1, score2) {
-  return (score0 + score1 + score2) / 3;
-}
+// function calcAverage(score0, score1, score2) {
+//   return (score0 + score1 + score2) / 3;
+// }
 
-const scoreDolphins = calcAverage(85, 54, 41);
-const scoreKoalas = calcAverage(23, 24, 27);
+// const scoreDolphins = calcAverage(85, 54, 41);
+// const scoreKoalas = calcAverage(23, 24, 27);
 
-function checkWinner(avgDolphins, avgKoalas) {
-  if (avgDolphins > avgKoalas) {
-    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-    return;
-  } else if (avgDolphins < avgKoalas) {
-    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-    return;
-  } else {
-    console.log(`No team wins...`);
-    return;
-  }
-}
+// function checkWinner(avgDolphins, avgKoalas) {
+//   if (avgDolphins > avgKoalas) {
+//     console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+//     return;
+//   } else if (avgDolphins < avgKoalas) {
+//     console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+//     return;
+//   } else {
+//     console.log(`No team wins...`);
+//     return;
+//   }
+// }
 
-checkWinner(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
 
-//
+// //
+
+// Array methods
+const friends = [`Edvinas`, `Deividas`, `Jonas`];
+
+// Adds a value to the back of array. Returns new array size
+let newSize = friends.push(`Steve`);
+
+console.log(friends);
+console.log(newSize);
+
+// Adds new value to the front of array. Returns size
+newSize = friends.unshift(`Jay`);
+
+console.log(friends);
+console.log(newSize);
+
+// Removes REMOVED ELEMENT!!!
+const popped = friends.pop();
+
+console.log(friends);
+console.log(popped);
+
+// Removes element from the front of the array
+friends.shift();
+
+console.log(friends);
+
+// Returns index of the value in the array
+console.log(friends.indexOf(`Edvinas`));
+
+// Returns true or falsed based on wheter the value exists
+console.log(friends.includes(`Edvinas`));
