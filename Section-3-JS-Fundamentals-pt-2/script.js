@@ -65,34 +65,68 @@
 
 // //
 
-// Array methods
-const friends = [`Edvinas`, `Deividas`, `Jonas`];
+// // Array methods
+// const friends = [`Edvinas`, `Deividas`, `Jonas`];
 
-// Adds a value to the back of array. Returns new array size
-let newSize = friends.push(`Steve`);
+// // Adds a value to the back of array. Returns new array size
+// let newSize = friends.push(`Steve`);
 
-console.log(friends);
-console.log(newSize);
+// console.log(friends);
+// console.log(newSize);
 
-// Adds new value to the front of array. Returns size
-newSize = friends.unshift(`Jay`);
+// // Adds new value to the front of array. Returns size
+// newSize = friends.unshift(`Jay`);
 
-console.log(friends);
-console.log(newSize);
+// console.log(friends);
+// console.log(newSize);
 
-// Removes REMOVED ELEMENT!!!
-const popped = friends.pop();
+// // Removes REMOVED ELEMENT!!!
+// const popped = friends.pop();
 
-console.log(friends);
-console.log(popped);
+// console.log(friends);
+// console.log(popped);
 
-// Removes element from the front of the array
-friends.shift();
+// // Removes element from the front of the array
+// friends.shift();
 
-console.log(friends);
+// console.log(friends);
 
-// Returns index of the value in the array
-console.log(friends.indexOf(`Edvinas`));
+// // Returns index of the value in the array
+// console.log(friends.indexOf(`Edvinas`));
 
-// Returns true or falsed based on wheter the value exists
-console.log(friends.includes(`Edvinas`));
+// // Returns true or falsed based on wheter the value exists
+// console.log(friends.includes(`Edvinas`));
+
+//
+// Challange #2
+//
+/* Write your code below. Good luck! 🙂 */
+
+function calcTip(bill) {
+  if (bill >= 50 && bill <= 300) return bill * 0.15;
+  else return bill * 0.2;
+}
+
+function calcTips(bills) {
+  const tips = [];
+
+  tips.push(calcTip(bills[0]));
+  tips.push(calcTip(bills[1]));
+  tips.push(calcTip(bills[2]));
+
+  return tips;
+}
+
+function calcTotals(bills, tips) {
+  const totals = [];
+
+  totals.push(bills[0] + tips[0]);
+  totals.push(bills[1] + tips[1]);
+  totals.push(bills[2] + tips[2]);
+
+  return totals;
+}
+
+const bills = [125, 555, 44];
+const tips = calcTips(bills);
+const totals = calcTotals(bills, tips);
