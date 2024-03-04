@@ -243,14 +243,26 @@
 //   console.log('BMI is the same');
 // }
 
-for (let i = 1; i <= 10; ++i) {
-  console.log(`lift ${i}`);
-}
+// for (let i = 1; i <= 10; ++i) {
+//   console.log(`lift ${i}`);
+// }
 
-const friends = [`Edvinas`, `Deividas`, `Jonas`];
-const friendTypes = [];
+// const friends = [`Edvinas`, `Deividas`, `Jonas`];
+// const friendTypes = [];
 
-for (let i = 0; i < friends.length; ++i) {
-  friendTypes[i] = typeof friends[i];
-  console.log(friends[i], friendTypes[i]);
+// for (let i = 0; i < friends.length; ++i) {
+//   friendTypes[i] = typeof friends[i];
+//   console.log(friends[i], friendTypes[i]);
+// }
+
+// let rep = 1;
+// while (rep <= 10) {
+//   console.log(rep);
+//   ++rep;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  dice = Math.trunc(Math.random() * 6) + 1;
+  console.log(dice);
 }
