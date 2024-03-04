@@ -159,45 +159,86 @@
 //   `${human.firstName} has ${human.friends.length} friends, and his best friend is called ${human.friends[0]}`
 // );
 
-const human = {
-  firstName: `Edvinas`,
-  lastName: `Bur`,
-  age: 19,
-  birthYear: 2005,
-  job: `Coder`,
-  friends: [`Micheal`, `Jake`, `Jonas`],
-  hasDriversLicense: false,
+// const human = {
+//   firstName: `Edvinas`,
+//   lastName: `Bur`,
+//   age: 19,
+//   birthYear: 2005,
+//   job: `Coder`,
+//   friends: [`Micheal`, `Jake`, `Jonas`],
+//   hasDriversLicense: false,
 
-  // Function is not stored into a variable, it is a property! Hence why :
-  // calcAge: function (birthYear) {
-  //   return 2077 - birthYear;
-  // },
+//   // Function is not stored into a variable, it is a property! Hence why :
+//   // calcAge: function (birthYear) {
+//   //   return 2077 - birthYear;
+//   // },
 
-  // Uses this to retrieve birth year from the current object
-  // calcAge: function () {
-  //   // this takes more computing time
-  //   return 2077 - this.birthYear;
-  // },
+//   // Uses this to retrieve birth year from the current object
+//   // calcAge: function () {
+//   //   // this takes more computing time
+//   //   return 2077 - this.birthYear;
+//   // },
 
-  calcAge: function () {
-    this.age = 2077 - this.birthYear;
-    return this.age;
-  },
+//   calcAge: function () {
+//     this.age = 2077 - this.birthYear;
+//     return this.age;
+//   },
 
-  //
-  // Little challange
-  //
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()} year old ${
-      this.job
-    } that was born in ${this.birthYear} and has ${
-      this.friends.length
-    } friends. He also ${
-      this.hasDriversLicense
-        ? `has a drivers license`
-        : `does not yet have a drivers license`
-    }.`;
+//   //
+//   // Little challange
+//   //
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()} year old ${
+//       this.job
+//     } that was born in ${this.birthYear} and has ${
+//       this.friends.length
+//     } friends. He also ${
+//       this.hasDriversLicense
+//         ? `has a drivers license`
+//         : `does not yet have a drivers license`
+//     }.`;
+//   },
+// };
+
+// console.log(human.getSummary());
+
+//
+// Challange #3 BMI
+//
+
+const mark = {
+  fullName: `Mark Miller`,
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
   },
 };
 
-console.log(human.getSummary());
+const john = {
+  fullName: `John Smith`,
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`
+  );
+} else if (mark.bmi < john.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`
+  );
+} else {
+  console.log('BMI is the same');
+}
