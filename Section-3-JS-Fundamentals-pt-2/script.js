@@ -102,31 +102,59 @@
 //
 /* Write your code below. Good luck! 🙂 */
 
-function calcTip(bill) {
-  if (bill >= 50 && bill <= 300) return bill * 0.15;
-  else return bill * 0.2;
-}
+// function calcTip(bill) {
+//   if (bill >= 50 && bill <= 300) return bill * 0.15;
+//   else return bill * 0.2;
+// }
 
-function calcTips(bills) {
-  const tips = [];
+// function calcTips(bills) {
+//   const tips = [];
 
-  tips.push(calcTip(bills[0]));
-  tips.push(calcTip(bills[1]));
-  tips.push(calcTip(bills[2]));
+//   tips.push(calcTip(bills[0]));
+//   tips.push(calcTip(bills[1]));
+//   tips.push(calcTip(bills[2]));
 
-  return tips;
-}
+//   return tips;
+// }
 
-function calcTotals(bills, tips) {
-  const totals = [];
+// function calcTotals(bills, tips) {
+//   const totals = [];
 
-  totals.push(bills[0] + tips[0]);
-  totals.push(bills[1] + tips[1]);
-  totals.push(bills[2] + tips[2]);
+//   totals.push(bills[0] + tips[0]);
+//   totals.push(bills[1] + tips[1]);
+//   totals.push(bills[2] + tips[2]);
 
-  return totals;
-}
+//   return totals;
+// }
 
-const bills = [125, 555, 44];
-const tips = calcTips(bills);
-const totals = calcTotals(bills, tips);
+// const bills = [125, 555, 44];
+// const tips = calcTips(bills);
+// const totals = calcTotals(bills, tips);
+
+const human = {
+  firstName: `Edvinas`,
+  lastName: `Bur`,
+  age: 1337,
+  job: `Coder`,
+  friends: [`Micheal`, `Jake`, `Jonas`],
+};
+
+console.log(human.age);
+console.log(human[`age`]);
+
+const nameKey = `Name`;
+
+// Expression bracket notation
+console.log(human[`first` + nameKey]);
+
+human.gender = `Male`;
+
+human[`Interests`] = `Reverse engineering`;
+
+//
+// Little challange
+//
+
+console.log(
+  `${human.firstName} has ${human.friends.length} friends, and his best friend is called ${human.friends[0]}`
+);
