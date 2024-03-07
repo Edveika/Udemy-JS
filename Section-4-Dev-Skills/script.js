@@ -19,30 +19,49 @@
 // // Problem identified
 // console.log(measureKelvin());
 
-const calcTempAmplitudeBug = function (t1, t2) {
-  const temps = t1.concat(t2);
-  console.log(temps);
+// const calcTempAmplitudeBug = function (t1, t2) {
+//   const temps = t1.concat(t2);
+//   console.log(temps);
 
-  // Bug found: Woopsies, if min value is 0, there might not be any smaller values. Set it to first array element
-  // let max = 0;
-  // let min = 0;
+//   // Bug found: Woopsies, if min value is 0, there might not be any smaller values. Set it to first array element
+//   // let max = 0;
+//   // let min = 0;
 
-  // Fix the problem
-  let max = temps[0];
-  let min = temps[0];
+//   // Fix the problem
+//   let max = temps[0];
+//   let min = temps[0];
 
-  for (let i = 0; i < temps.length; i++) {
-    const curTemp = temps[i];
-    if (typeof curTemp !== 'number') continue;
+//   for (let i = 0; i < temps.length; i++) {
+//     const curTemp = temps[i];
+//     if (typeof curTemp !== 'number') continue;
 
-    if (curTemp > max) max = curTemp;
-    if (curTemp < min) min = curTemp;
+//     if (curTemp > max) max = curTemp;
+//     if (curTemp < min) min = curTemp;
+//   }
+//   console.log(max, min);
+//   return max - min;
+// };
+
+// const buggy = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+
+// // Identify
+// console.log(buggy);
+
+//
+// CHallange #1
+//
+
+function forecast(max_temps) {
+  let forecast_str = ``;
+
+  for (let i = 0; i < max_temps.length; ++i) {
+    if (typeof max_temps[i] !== 'number') continue;
+
+    forecast_str += `... ${max_temps[i]}C in ${i + 1} days`;
   }
-  console.log(max, min);
-  return max - min;
-};
 
-const buggy = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+  return forecast_str;
+}
 
-// Identify
-console.log(buggy);
+console.log(forecast([17, 21, 23]));
+console.log(forecast([12, 5, -5, 0, 4]));
