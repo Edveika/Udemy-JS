@@ -23,7 +23,7 @@ document.querySelector('.check').addEventListener('click', function () {
     won = true;
     document.querySelector('.message').textContent = '🎉 Correct number!';
     document.querySelector('.number').textContent = number;
-    document.querySelector('body').style.backgroundColor = '#2b8a3e';
+    document.querySelector('body').style.backgroundColor = '#60b347';
     if (curScore > highscore) {
       highscore = curScore;
       document.querySelector('.highscore').textContent = highscore;
