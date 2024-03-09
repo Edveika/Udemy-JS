@@ -16,13 +16,15 @@ function randomNumber(max) {
 let number = randomNumber(20);
 let curScore = 20;
 let highscore = 0;
+let won = false;
 
 document.querySelector('.check').addEventListener('click', function () {
-  if (curScore === 0) return;
+  if (curScore === 0 || won) return;
 
   const guessNumber = Number(document.querySelector('.guess').value);
 
   if (guessNumber === number) {
+    won = true;
     document.querySelector('.message').textContent = '🎉 Correct number!';
     document.querySelector('.number').textContent = number;
     if (curScore > highscore) {
