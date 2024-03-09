@@ -1,14 +1,5 @@
 'use strict';
 
-// console.log(document.querySelector('.message').textContent);
-
-// document.querySelector('.message').textContent = '🎉 Correct number!';
-// document.querySelector('.number').textContent = 7331;
-// document.querySelector('.score').textContent = 12;
-// document.querySelector('.highscore').textContent = 1337;
-
-// document.querySelector('.guess');
-
 function randomNumber(max) {
   return Math.floor(Math.random() * max) + 1;
 }
@@ -32,6 +23,7 @@ document.querySelector('.check').addEventListener('click', function () {
     won = true;
     document.querySelector('.message').textContent = '🎉 Correct number!';
     document.querySelector('.number').textContent = number;
+    document.querySelector('body').style.backgroundColor = '#2b8a3e';
     if (curScore > highscore) {
       highscore = curScore;
       document.querySelector('.highscore').textContent = highscore;
@@ -43,6 +35,7 @@ document.querySelector('.check').addEventListener('click', function () {
     if (curScore === 0) {
       document.querySelector('.number').textContent = number;
       document.querySelector('.message').textContent = '😈 You lose!';
+      document.querySelector('body').style.backgroundColor = '#c92a2a';
     } else {
       if (guessNumber > number) {
         document.querySelector('.message').textContent = '⬇️ Try lower!';
