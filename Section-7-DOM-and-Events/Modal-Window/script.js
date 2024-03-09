@@ -16,3 +16,10 @@ btnHide.addEventListener('click', function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 });
+
+overlay.addEventListener('click', function () {
+  if (overlay.classList.contains('hidden')) return;
+
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
