@@ -18,19 +18,30 @@ let curScore = 20;
 let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
-  if (Number(document.querySelector('.guess').value) === number) {
+  if (curScore == 0) return;
+
+  const guessNumber = Number(document.querySelector('.guess').value);
+
+  if (guessNumber === number) {
     document.querySelector('.message').textContent = '🎉 Correct number!';
+    document.querySelector('.number').textContent = number;
     if (curScore > highscore) {
       highscore = curScore;
       document.querySelector('.highscore').textContent = highscore;
-      document.querySelector('.number').textContent = number;
-      // Green background
     }
   } else {
-    // if score is 0, end game, red background
     --curScore;
-    document.querySelector('.message').textContent = '💥 Try again!';
     document.querySelector('.score').textContent = curScore;
+
+    if (curScore === 0) {
+      document.querySelector('.message').textContent = '😈 You lose!';
+    } else {
+      if (guessNumber > number) {
+        document.querySelector('.message').textContent = 'Try lower!';
+      } else {
+        document.querySelector('.message').textContent = 'Try higher!';
+      }
+    }
   }
 });
 
