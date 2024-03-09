@@ -34,6 +34,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.score').textContent = curScore;
 
     if (curScore === 0) {
+      document.querySelector('.number').textContent = number;
       document.querySelector('.message').textContent = '😈 You lose!';
     } else {
       if (guessNumber > number) {
@@ -47,4 +48,9 @@ document.querySelector('.check').addEventListener('click', function () {
 
 document.querySelector('.again').addEventListener('click', function () {
   number = randomNumber(20);
+  curScore = 20;
+
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = curScore;
 });
