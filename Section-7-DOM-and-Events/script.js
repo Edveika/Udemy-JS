@@ -18,7 +18,7 @@ let curScore = 20;
 let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
-  if (curScore == 0) return;
+  if (curScore === 0) return;
 
   const guessNumber = Number(document.querySelector('.guess').value);
 
