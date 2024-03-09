@@ -19,9 +19,14 @@ let highscore = 0;
 let won = false;
 
 document.querySelector('.check').addEventListener('click', function () {
+  const guessNumber = Number(document.querySelector('.guess').value);
+
   if (curScore === 0 || won) return;
 
-  const guessNumber = Number(document.querySelector('.guess').value);
+  if (!guessNumber || guessNumber > 20 || guessNumber < 1) {
+    document.querySelector('.message').textContent = 'Input a valid number!';
+    return;
+  }
 
   if (guessNumber === number) {
     won = true;
