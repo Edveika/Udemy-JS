@@ -24,7 +24,7 @@ document.querySelector('.check').addEventListener('click', function () {
   if (curScore === 0 || won) return;
 
   if (!guessNumber || guessNumber > 20 || guessNumber < 1) {
-    document.querySelector('.message').textContent = 'Input a valid number!';
+    document.querySelector('.message').textContent = '🛑 Input a valid number!';
     return;
   }
 
@@ -45,9 +45,9 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.message').textContent = '😈 You lose!';
     } else {
       if (guessNumber > number) {
-        document.querySelector('.message').textContent = 'Try lower!';
+        document.querySelector('.message').textContent = '⬇️ Try lower!';
       } else {
-        document.querySelector('.message').textContent = 'Try higher!';
+        document.querySelector('.message').textContent = '⬆️ Try higher!';
       }
     }
   }
