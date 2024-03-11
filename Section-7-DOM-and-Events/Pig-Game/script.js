@@ -29,6 +29,8 @@ function getRandomInt(max) {
 function updateDiceImg(num) {
   if (num > 6 || num < 1) return;
 
+  if (typeof num !== Number) return;
+
   diceImgObj.src = `img/dice-${num}.png`;
 }
 
