@@ -1,15 +1,15 @@
 'use strict';
 
-// Player 0 and 1 HTML objects
-const p0Obj = document.querySelector('.player--0');
-const p1Obj = document.querySelector('.player--1');
-const p0ScoreObj = document.getElementById('score--0');
-const p1ScoreObj = document.getElementById('score--1');
-const p0CurScoreObj = document.querySelector('#current--0');
-const p1CurScoreObj = document.querySelector('#current--1');
+// Player 0 and 1 HTML elements
+const p0El = document.querySelector('.player--0');
+const p1El = document.querySelector('.player--1');
+const p0ScoreEl = document.getElementById('score--0');
+const p1ScoreEl = document.getElementById('score--1');
+const p0CurScoreEl = document.querySelector('#current--0');
+const p1CurScoreEl = document.querySelector('#current--1');
 
 // GUI HTML objects
-const diceImgObj = document.querySelector('.dice');
+const diceImg = document.querySelector('.dice');
 const btnNewGame = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
@@ -17,71 +17,56 @@ const btnHold = document.querySelector('.btn--hold');
 // Game variables
 let curRoller = 0;
 let curRollerCurScore = 0;
-let score0 = 0;
-let score1 = 0;
-let diceNum = 0;
+let scores = [0, 0];
 let gameOver = false;
 
 // Reset the score
-p0ScoreObj.textContent = '0';
-p1ScoreObj.textContent = '0';
+p0ScoreEl.textContent = '0';
+p1ScoreEl.textContent = '0';
 
 // hide dice
-diceImgObj.classList.add('hidden');
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max) + 1;
-}
+diceImg.classList.add('hidden');
 
 function updateDiceImg(num) {
   if (num > 6 || num < 1) return;
 
   if (typeof num !== 'number') return;
 
-  if (diceImgObj.classList.contains('hidden'))
-    diceImgObj.classList.remove('hidden');
+  if (diceImg.classList.contains('hidden')) diceImg.classList.remove('hidden');
 
-  diceImgObj.src = `img/dice-${num}.png`;
+  diceImg.src = `img/dice-${num}.png`;
 }
 
 function rollDice() {
-  diceNum = getRandomInt(6);
+  const diceNum = Math.floor(Math.random() * 6) + 1;
   updateDiceImg(diceNum);
+  return diceNum;
 }
 
 function switchPlayer() {
-  if (curRoller === 0) {
-    curRoller = 1;
-    p0Obj.classList.remove('player--active');
-    p1Obj.classList.add('player--active');
-  } else {
-    curRoller = 0;
-    p1Obj.classList.remove('player--active');
-    p0Obj.classList.add('player--active');
-  }
-}
+  document
+    .querySelector(`.player--${curRoller}`)
+    .classList.remove('player--active');
 
-function updateCurScore() {
-  if (diceNum === 1) {
-    switchPlayer();
-    curRollerCurScore = 0;
-  } else {
-    curRollerCurScore = diceNum;
-  }
+  curRoller = curRoller === 0 ? 1 : 0;
+
+  document
+    .querySelector(`.player--${curRoller}`)
+    .classList.add('player--active');
 }
 
 btnRoll.addEventListener('click', function () {
   if (gameOver) return;
 
-  rollDice();
+  const diceNum = rollDice();
 
-  if (curRoller === 0) {
-    updateCurScore();
-    p0CurScoreObj.textContent = curRollerCurScore;
-  } else {
-    updateCurScore();
-    p1CurScoreObj.textContent = curRollerCurScore;
-  }
+  if (diceNum === 1) curRollerCurScore = 0;
+  else curRollerCurScore += diceNum;
+
+  document.querySelector(`#current--${curRoller}`).textContent =
+    curRollerCurScore;
+
+  if (diceNum === 1) switchPlayer();
 });
 
 btnHold.addEventListener('click', function () {
@@ -89,36 +74,41 @@ btnHold.addEventListener('click', function () {
 
   if (curRollerCurScore === 0) return;
 
-  if (curRoller === 0) {
-    score0 += curRollerCurScore;
-    curRollerCurScore = 0;
-    p0ScoreObj.textContent = score0;
-    p0CurScoreObj.textContent = 0;
-    if (score0 >= 10) {
-      gameOver = true;
-      p0Obj.classList.add('player--winner');
-    } else switchPlayer();
+  scores[curRoller] += curRollerCurScore;
+  curRollerCurScore = 0;
+  document.getElementById(`score--${curRoller}`).textContent =
+    scores[curRoller];
+  document.getElementById(`current--${curRoller}`).textContent = 0;
+  if (scores[curRoller] >= 100) {
+    gameOver = true;
+    document
+      .querySelector(`.player--${curRoller}`)
+      .classList.add('player--winner');
   } else {
-    score1 += curRollerCurScore;
-    curRollerCurScore = 0;
-    p1ScoreObj.textContent = score1;
-    p1CurScoreObj.textContent = 0;
-    if (score1 >= 10) {
-      p1Obj.classList.add('player--winner');
-    } else switchPlayer();
+    switchPlayer();
   }
 });
 
 btnNewGame.addEventListener('click', function () {
   if (curRoller === 1) switchPlayer();
 
+  for (let i = 0; i < scores.length; ++i) {
+    if (
+      document
+        .querySelector(`.player--${i}`)
+        .classList.contains('player--winner')
+    )
+      document
+        .querySelector(`.player--${i}`)
+        .classList.remove('player--winner');
+  }
+
   curRollerCurScore = 0;
-  score0 = 0;
-  score1 = 0;
-  rollDice();
-  p0ScoreObj.textContent = 0;
-  p1ScoreObj.textContent = 0;
-  p0CurScoreObj.textContent = 0;
-  p1CurScoreObj.textContent = 0;
+  scores = [0, 0];
+  diceImg.classList.add('hidden');
+  p0ScoreEl.textContent = 0;
+  p1ScoreEl.textContent = 0;
+  p0CurScoreEl.textContent = 0;
+  p1CurScoreEl.textContent = 0;
   gameOver = false;
 });
