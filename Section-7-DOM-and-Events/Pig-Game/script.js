@@ -14,11 +14,14 @@ const btnNewGame = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
+// Game variables
 let curRoller = 0;
 let curRollerCurScore = 0;
 let score0 = 0;
 let score1 = 0;
-let diceNum = getRandomInt(6);
+let diceNum = 0;
+
+// Reset the score
 p0ScoreObj.textContent = '0';
 p1ScoreObj.textContent = '0';
 
@@ -29,7 +32,7 @@ function getRandomInt(max) {
 function updateDiceImg(num) {
   if (num > 6 || num < 1) return;
 
-  if (typeof num !== Number) return;
+  if (typeof num !== 'number') return;
 
   diceImgObj.src = `img/dice-${num}.png`;
 }
@@ -38,6 +41,9 @@ function rollDice() {
   diceNum = getRandomInt(6);
   updateDiceImg(diceNum);
 }
+
+// Dice is rolled to init the diceNum variable and update the image
+rollDice();
 
 function switchPlayer() {
   if (curRoller === 0) {
@@ -98,7 +104,7 @@ btnNewGame.addEventListener('click', function () {
   curRollerCurScore = 0;
   score0 = 0;
   score1 = 0;
-  diceNum = getRandomInt(6);
+  rollDice();
   p0ScoreObj.textContent = 0;
   p1ScoreObj.textContent = 0;
   p0CurScoreObj.textContent = 0;
