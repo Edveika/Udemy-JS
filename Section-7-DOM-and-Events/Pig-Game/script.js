@@ -3,8 +3,8 @@
 // Player 0 and 1 HTML objects
 const p0Obj = document.querySelector('.player--0');
 const p1Obj = document.querySelector('.player--1');
-const p0ScoreObj = document.querySelector('#score--0');
-const p1ScoreObj = document.querySelector('#score--1');
+const p0ScoreObj = document.getElementById('score--0');
+const p1ScoreObj = document.getElementById('score--1');
 const p0CurScoreObj = document.querySelector('#current--0');
 const p1CurScoreObj = document.querySelector('#current--1');
 
@@ -15,6 +15,9 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
 let curRoller = 0;
+let curRollerCurScore = 0;
+let score0 = 0;
+let score1 = 0;
 let diceNum = getRandomInt(6);
 p0ScoreObj.textContent = '0';
 p1ScoreObj.textContent = '0';
@@ -52,20 +55,39 @@ btnRoll.addEventListener('click', function () {
   if (curRoller === 0) {
     if (diceNum === 1) {
       switchPlayer();
-      p0CurScoreObj.textContent = 0;
+      curRollerCurScore = 0;
     } else {
-      p0CurScoreObj.textContent = diceNum;
+      curRollerCurScore = diceNum;
     }
+    p0CurScoreObj.textContent = curRollerCurScore;
   } else {
     if (diceNum === 1) {
       switchPlayer();
-      p1CurScoreObj.textContent = 0;
+      curRollerCurScore = 0;
     } else {
-      p1CurScoreObj.textContent = diceNum;
+      curRollerCurScore = diceNum;
     }
+    p1CurScoreObj.textContent = curRollerCurScore;
   }
 });
 
-btnHold.addEventListener('click', function () {});
+btnHold.addEventListener('click', function () {
+  console.log(curRollerCurScore);
+  if (curRollerCurScore === 0) return;
+
+  if (curRoller === 0) {
+    score0 += curRollerCurScore;
+    curRollerCurScore = 0;
+    p0ScoreObj.textContent = score0;
+    p0CurScoreObj.textContent = 0;
+    switchPlayer();
+  } else {
+    score1 += curRollerCurScore;
+    curRollerCurScore = 0;
+    p1ScoreObj.textContent = score1;
+    p1CurScoreObj.textContent = 0;
+    switchPlayer();
+  }
+});
 
 btnNewGame.addEventListener('click', function () {});
