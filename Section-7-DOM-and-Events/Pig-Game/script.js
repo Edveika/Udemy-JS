@@ -20,10 +20,14 @@ let curRollerCurScore = 0;
 let score0 = 0;
 let score1 = 0;
 let diceNum = 0;
+let gameOver = false;
 
 // Reset the score
 p0ScoreObj.textContent = '0';
 p1ScoreObj.textContent = '0';
+
+// hide dice
+diceImgObj.classList.add('hidden');
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max) + 1;
@@ -34,6 +38,9 @@ function updateDiceImg(num) {
 
   if (typeof num !== 'number') return;
 
+  if (diceImgObj.classList.contains('hidden'))
+    diceImgObj.classList.remove('hidden');
+
   diceImgObj.src = `img/dice-${num}.png`;
 }
 
@@ -41,9 +48,6 @@ function rollDice() {
   diceNum = getRandomInt(6);
   updateDiceImg(diceNum);
 }
-
-// Dice is rolled to init the diceNum variable and update the image
-rollDice();
 
 function switchPlayer() {
   if (curRoller === 0) {
@@ -57,30 +61,32 @@ function switchPlayer() {
   }
 }
 
+function updateCurScore() {
+  if (diceNum === 1) {
+    switchPlayer();
+    curRollerCurScore = 0;
+  } else {
+    curRollerCurScore = diceNum;
+  }
+}
+
 btnRoll.addEventListener('click', function () {
+  if (gameOver) return;
+
   rollDice();
 
   if (curRoller === 0) {
-    if (diceNum === 1) {
-      switchPlayer();
-      curRollerCurScore = 0;
-    } else {
-      curRollerCurScore = diceNum;
-    }
+    updateCurScore();
     p0CurScoreObj.textContent = curRollerCurScore;
   } else {
-    if (diceNum === 1) {
-      switchPlayer();
-      curRollerCurScore = 0;
-    } else {
-      curRollerCurScore = diceNum;
-    }
+    updateCurScore();
     p1CurScoreObj.textContent = curRollerCurScore;
   }
 });
 
 btnHold.addEventListener('click', function () {
-  console.log(curRollerCurScore);
+  if (gameOver) return;
+
   if (curRollerCurScore === 0) return;
 
   if (curRoller === 0) {
@@ -88,13 +94,18 @@ btnHold.addEventListener('click', function () {
     curRollerCurScore = 0;
     p0ScoreObj.textContent = score0;
     p0CurScoreObj.textContent = 0;
-    switchPlayer();
+    if (score0 >= 10) {
+      gameOver = true;
+      p0Obj.classList.add('player--winner');
+    } else switchPlayer();
   } else {
     score1 += curRollerCurScore;
     curRollerCurScore = 0;
     p1ScoreObj.textContent = score1;
     p1CurScoreObj.textContent = 0;
-    switchPlayer();
+    if (score1 >= 10) {
+      p1Obj.classList.add('player--winner');
+    } else switchPlayer();
   }
 });
 
@@ -109,4 +120,5 @@ btnNewGame.addEventListener('click', function () {
   p1ScoreObj.textContent = 0;
   p0CurScoreObj.textContent = 0;
   p1CurScoreObj.textContent = 0;
+  gameOver = false;
 });
