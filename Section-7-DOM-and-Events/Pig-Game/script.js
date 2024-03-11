@@ -90,4 +90,15 @@ btnHold.addEventListener('click', function () {
   }
 });
 
-btnNewGame.addEventListener('click', function () {});
+btnNewGame.addEventListener('click', function () {
+  if (curRoller === 1) switchPlayer();
+
+  curRollerCurScore = 0;
+  score0 = 0;
+  score1 = 0;
+  diceNum = getRandomInt(6);
+  p0ScoreObj.textContent = 0;
+  p1ScoreObj.textContent = 0;
+  p0CurScoreObj.textContent = 0;
+  p1CurScoreObj.textContent = 0;
+});
