@@ -49,6 +49,28 @@ const restaurant = {
 };
 
 //
+// Logical assignment
+//
+
+const rest1 = {
+  name: "Capri",
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
+};
+
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+rest1.numGuests ??= 10;
+rest2.numGuests ||= 10;
+
+console.log(rest1.numGuests, rest2.numGuests);
+
+//
 // Nullish operator
 //
 
@@ -553,13 +575,13 @@ const books = [
 
 // offersOnlineContent(books);
 
-function offersOnlineContent(books) {
-  for (let i = 0; i < books.length; ++i) {
-    books[i].onlineContent ??
-      console.log(
-        `"${books[i].title}" provides no data about its online content`
-      );
-  }
-}
+// function offersOnlineContent(books) {
+//   for (let i = 0; i < books.length; ++i) {
+//     books[i].onlineContent ??
+//       console.log(
+//         `"${books[i].title}" provides no data about its online content`
+//       );
+//   }
+// }
 
-offersOnlineContent(books);
+// offersOnlineContent(books);
