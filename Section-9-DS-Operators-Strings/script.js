@@ -48,7 +48,7 @@ const restaurant = {
   },
 };
 
-restaurant.orderPizza("mushrooms", "onion", "olives");
+// restaurant.orderPizza("mushrooms", "onion", "olives");
 
 //
 // Rest operator, rest parameters (packs array)
@@ -499,3 +499,8 @@ const books = [
 // }
 
 // spellWord("JavaScript");
+
+// 4 - rest operator
+
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(mainKeyword, rest);
