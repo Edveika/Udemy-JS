@@ -53,6 +53,12 @@ console.log(...newArr);
 const newMenu = ["Bomzpakiai", ...restaurant.mainMenu];
 console.log(newMenu);
 
+const mainMenuCopy = [...restaurant.mainMenu];
+
+const fullMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+console.log(fullMenu);
+
 //
 // Objects
 //
