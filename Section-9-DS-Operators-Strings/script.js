@@ -391,7 +391,7 @@ const books = [
 
 // 1 - ARRAYS
 
-//const [firstBook, secondBook] = books;
+const [firstBook, secondBook] = books;
 
 // console.table(firstBook);
 // console.table(secondBook);
@@ -446,3 +446,9 @@ const books = [
 // }
 
 // printBookInfo(firstBook);
+
+// 3 - spread operator
+
+const bookAuthors = [...firstBook.author, ...secondBook.author];
+
+console.log(bookAuthors);
