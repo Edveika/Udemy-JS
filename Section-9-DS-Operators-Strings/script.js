@@ -378,19 +378,25 @@ const [firstBook, secondBook] = books;
 // const { programmingLanguage: language = "unknown" } = sixthBook;
 // console.log(language);
 
-let bookTitle = "unknown";
-let bookAuthor = "unknown";
+// let bookTitle = "unknown";
+// let bookAuthor = "unknown";
 
-({ title: bookTitle } = firstBook);
-({ author: bookAuthor } = firstBook);
+// ({ title: bookTitle } = firstBook);
+// ({ author: bookAuthor } = firstBook);
 
-console.log(bookTitle);
-console.log(bookAuthor);
+// console.log(bookTitle);
+// console.log(bookAuthor);
 
-const {
-  thirdParty: {
-    goodreads: { rating },
-  },
-} = books[0];
+// const {
+//   thirdParty: {
+//     goodreads: { rating },
+//   },
+// } = books[0];
 
-console.log(rating);
+// console.log(rating);
+
+function printBookInfo({ title, author, year = "unknown" }) {
+  console.log(`${title} by ${author}, ${year}`);
+}
+
+printBookInfo(firstBook);
