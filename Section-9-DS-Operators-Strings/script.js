@@ -452,3 +452,9 @@ const [firstBook, secondBook] = books;
 const bookAuthors = [...firstBook.author, ...secondBook.author];
 
 console.log(bookAuthors);
+
+function spellWord(str) {
+  console.log(...str);
+}
+
+spellWord("JavaScript");
