@@ -56,3 +56,10 @@ console.log(main, secondary);
 // Returns 2 values from a function
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
+
+const nested = [2, 4, [5, 6]];
+const [values, , array] = nested;
+console.log(values, array);
+
+const [i, , [j, k]] = nested;
+console.log(i, j, k);
