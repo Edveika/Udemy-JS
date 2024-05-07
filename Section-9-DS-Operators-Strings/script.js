@@ -38,5 +38,13 @@ const [x, y, z] = arr;
 console.log(x, y, z);
 
 // Skips one element
-const [first, , second] = restaurant.categories;
-console.log(first, second);
+let [main, , secondary] = restaurant.categories;
+console.log(main, secondary);
+
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary);
+
+// Will swap values
+[main, secondary] = [secondary, main];
