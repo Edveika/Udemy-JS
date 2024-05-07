@@ -52,13 +52,13 @@ const restaurant = {
 // Nullish operator
 //
 
-restaurant.numGuests = 0;
-const guests = restaurant.numGuests || 10;
-console.log(guests);
+// restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// console.log(guests);
 
-// Null and undefined(no 0 or "")
-const guestsCorrect = restaurant.numGuests ?? 10;
-console.log(guestsCorrect);
+// // Null and undefined(no 0 or "")
+// const guestsCorrect = restaurant.numGuests ?? 10;
+// console.log(guestsCorrect);
 
 //
 // && and || operators, short circuiting
@@ -552,3 +552,14 @@ const books = [
 // }
 
 // offersOnlineContent(books);
+
+function offersOnlineContent(books) {
+  for (let i = 0; i < books.length; ++i) {
+    books[i].onlineContent ??
+      console.log(
+        `"${books[i].title}" provides no data about its online content`
+      );
+  }
+}
+
+offersOnlineContent(books);
