@@ -26,6 +26,10 @@ const restaurant = {
       close: 24,
     },
   },
+
+  order: function (i_startMenu, i_mainIndex) {
+    return [this.starterMenu[i_startMenu], this.mainMenu[i_mainIndex]];
+  },
 };
 
 const arr = [2, 3, 4];
@@ -48,3 +52,7 @@ console.log(main, secondary);
 
 // Will swap values
 [main, secondary] = [secondary, main];
+
+// Returns 2 values from a function
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
