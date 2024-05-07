@@ -32,6 +32,23 @@ const restaurant = {
   },
 };
 
+// Objects
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Arrays
+
 // const arr = [2, 3, 4];
 // const a = arr[0];
 // const b = arr[1];
@@ -299,23 +316,23 @@ const books = [
 
 // 1 - ARRAYS
 
-const [firstBook, secondBook] = books;
+// const [firstBook, secondBook] = books;
 
-console.table(firstBook);
-console.table(secondBook);
+// console.table(firstBook);
+// console.table(secondBook);
 
-const [, , thirdBook] = books;
+// const [, , thirdBook] = books;
 
-console.table(thirdBook);
+// console.table(thirdBook);
 
-const ratings = [
-  ["rating", 4.19],
-  ["ratingsCount", 144584],
-];
+// const ratings = [
+//   ["rating", 4.19],
+//   ["ratingsCount", 144584],
+// ];
 
-const [[, rating], [, ratingsCount]] = ratings;
-console.log(rating, ratingsCount);
+// const [[, rating], [, ratingsCount]] = ratings;
+// console.log(rating, ratingsCount);
 
-const ratingStars = [63405, 1808];
-const [fiveStar = 0, oneStar = 0, threeStar = 0] = ratingStars;
-console.log(fiveStar, oneStar, threeStar);
+// const ratingStars = [63405, 1808];
+// const [fiveStar = 0, oneStar = 0, threeStar = 0] = ratingStars;
+// console.log(fiveStar, oneStar, threeStar);
