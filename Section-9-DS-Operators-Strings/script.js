@@ -39,6 +39,21 @@ const restaurant = {
 };
 
 //
+// Spread operator
+//
+
+const arr = [7, 5, 9];
+
+// writes 7 5 9 after 1 2
+const newArr = [1, 2, ...arr];
+
+console.log(newArr);
+console.log(...newArr);
+
+const newMenu = ["Bomzpakiai", ...restaurant.mainMenu];
+console.log(newMenu);
+
+//
 // Objects
 //
 // const { name, openingHours, categories } = restaurant;
@@ -345,7 +360,7 @@ const books = [
 
 // 1 - ARRAYS
 
-const [firstBook, secondBook] = books;
+//const [firstBook, secondBook] = books;
 
 // console.table(firstBook);
 // console.table(secondBook);
@@ -395,8 +410,8 @@ const [firstBook, secondBook] = books;
 
 // console.log(rating);
 
-function printBookInfo({ title, author, year = "unknown" }) {
-  console.log(`${title} by ${author}, ${year}`);
-}
+// function printBookInfo({ title, author, year = "unknown" }) {
+//   console.log(`${title} by ${author}, ${year}`);
+// }
 
-printBookInfo(firstBook);
+// printBookInfo(firstBook);
