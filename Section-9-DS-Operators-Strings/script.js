@@ -43,7 +43,28 @@ const restaurant = {
 };
 
 //
-// Spread operator
+// Rest operator, rest parameters (packs array)
+//
+
+// REST because its on leftside of equal
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+
+console.log(a, b, others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherFood);
+
+// rest with objects
+
+const { sat, ...otherDays } = restaurant.openingHours;
+console.log(sat, otherDays);
+
+//
+// Spread operator ...arr(unpacks array)
 //
 
 // const arr = [7, 5, 9];
@@ -77,12 +98,12 @@ const restaurant = {
 
 // spread operator with objects
 
-const newResraurant = {
-  ...restaurant,
-  founder: "Guiseppe",
-  foundingYear: 1998,
-};
-console.log(newResraurant);
+// const newResraurant = {
+//   ...restaurant,
+//   founder: "Guiseppe",
+//   foundingYear: 1998,
+// };
+// console.log(newResraurant);
 
 //
 // Objects
@@ -391,7 +412,7 @@ const books = [
 
 // 1 - ARRAYS
 
-const [firstBook, secondBook] = books;
+//const [firstBook, secondBook] = books;
 
 // console.table(firstBook);
 // console.table(secondBook);
@@ -449,12 +470,12 @@ const [firstBook, secondBook] = books;
 
 // 3 - spread operator
 
-const bookAuthors = [...firstBook.author, ...secondBook.author];
+// const bookAuthors = [...firstBook.author, ...secondBook.author];
 
-console.log(bookAuthors);
+// console.log(bookAuthors);
 
-function spellWord(str) {
-  console.log(...str);
-}
+// function spellWord(str) {
+//   console.log(...str);
+// }
 
-spellWord("JavaScript");
+// spellWord("JavaScript");
