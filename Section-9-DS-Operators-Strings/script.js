@@ -49,6 +49,18 @@ const restaurant = {
 };
 
 //
+// Nullish operator
+//
+
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Null and undefined(no 0 or "")
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect);
+
+//
 // && and || operators, short circuiting
 //
 
@@ -526,17 +538,17 @@ const books = [
 
 // 5 - short circuit
 
-function hasExamplesInJava(book) {
-  return book.programmingLanguage === "Java" || "No data available";
-}
+// function hasExamplesInJava(book) {
+//   return book.programmingLanguage === "Java" || "No data available";
+// }
 
-console.log(hasExamplesInJava(books[3]));
+// console.log(hasExamplesInJava(books[3]));
 
-function offersOnlineContent(books) {
-  for (let i = 0; i < books.length; ++i) {
-    books[i].onlineContent &&
-      console.log(`"${books[i].title}" provides online content`);
-  }
-}
+// function offersOnlineContent(books) {
+//   for (let i = 0; i < books.length; ++i) {
+//     books[i].onlineContent &&
+//       console.log(`"${books[i].title}" provides online content`);
+//   }
+// }
 
-offersOnlineContent(books);
+// offersOnlineContent(books);
