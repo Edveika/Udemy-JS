@@ -40,7 +40,15 @@ const restaurant = {
   orderPasta: function (ing1, ing2, ing3) {
     console.log(`Here is your paste with ${ing1}, ${ing2}, ${ing3}`);
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(
+      `Main ingredient: ${mainIngredient}, other ingredients: ${otherIngredients}`
+    );
+  },
 };
+
+restaurant.orderPizza("mushrooms", "onion", "olives");
 
 //
 // Rest operator, rest parameters (packs array)
@@ -63,17 +71,17 @@ const restaurant = {
 // const { sat, ...otherDays } = restaurant.openingHours;
 // console.log(sat, otherDays);
 
-function add(...nums) {
-  let sum = 0;
+// function add(...nums) {
+//   let sum = 0;
 
-  for (let i = 0; i < nums.length; ++i) {
-    sum += nums[i];
-  }
+//   for (let i = 0; i < nums.length; ++i) {
+//     sum += nums[i];
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
 
-console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
+// console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
 //
 // Spread operator ...arr(unpacks array)
