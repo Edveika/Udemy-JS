@@ -46,34 +46,43 @@ const restaurant = {
 // Spread operator
 //
 
-const arr = [7, 5, 9];
+// const arr = [7, 5, 9];
 
-// writes 7 5 9 after 1 2
-const newArr = [1, 2, ...arr];
+// // writes 7 5 9 after 1 2
+// const newArr = [1, 2, ...arr];
 
-console.log(newArr);
-console.log(...newArr);
+// console.log(newArr);
+// console.log(...newArr);
 
-const newMenu = ["Bomzpakiai", ...restaurant.mainMenu];
-console.log(newMenu);
+// const newMenu = ["Bomzpakiai", ...restaurant.mainMenu];
+// console.log(newMenu);
 
-// shallow copy array
-const mainMenuCopy = [...restaurant.mainMenu];
+// // shallow copy array
+// const mainMenuCopy = [...restaurant.mainMenu];
 
-// join arrays
-const fullMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// // join arrays
+// const fullMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 
-console.log(fullMenu);
+// console.log(fullMenu);
 
-console.log(..."Hello, world");
+// console.log(..."Hello, world");
 
-const ingredients = [
-  prompt("ingredient 1"),
-  prompt("ingredient 2"),
-  prompt("ingredient 3"),
-];
+// const ingredients = [
+//   prompt("ingredient 1"),
+//   prompt("ingredient 2"),
+//   prompt("ingredient 3"),
+// ];
 
-restaurant.orderPasta(...ingredients);
+// restaurant.orderPasta(...ingredients);
+
+// spread operator with objects
+
+const newResraurant = {
+  ...restaurant,
+  founder: "Guiseppe",
+  foundingYear: 1998,
+};
+console.log(newResraurant);
 
 //
 // Objects
