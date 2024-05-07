@@ -63,3 +63,7 @@ console.log(values, array);
 
 const [i, , [j, k]] = nested;
 console.log(i, j, k);
+
+// Set default values
+const [p = 1, q = 1, r = 1] = [2, 3];
+console.log(p, q, r);
