@@ -48,6 +48,15 @@ const restaurant = {
   },
 };
 
+//
+// && and || operators, short circuiting
+//
+
+// Use any data type, return any data type
+// SHort circuit - if 1 is true, other will not get evaluated
+// console.log(3 || "Edvis");
+// console.log("" || "Edvis");
+
 // restaurant.orderPizza("mushrooms", "onion", "olives");
 
 //
@@ -502,15 +511,32 @@ const books = [
 
 // 4 - rest operator
 
-const [mainKeyword, ...rest] = books[0].keywords;
-// console.log(mainKeyword, rest);
+// const [mainKeyword, ...rest] = books[0].keywords;
+// // console.log(mainKeyword, rest);
 
-const { publisher: bookPublisher, ...restOfTheBook } = books[1];
-console.log(bookPublisher);
-console.log(restOfTheBook);
+// const { publisher: bookPublisher, ...restOfTheBook } = books[1];
+// console.log(bookPublisher);
+// console.log(restOfTheBook);
 
-function printBookAuthorsCount(title, ...authors) {
-  console.log(`The book "${title}" has ${authors.length} authors`);
+// function printBookAuthorsCount(title, ...authors) {
+//   console.log(`The book "${title}" has ${authors.length} authors`);
+// }
+
+// printBookAuthorsCount("Algorithms", "Robert Sedgewick", "Kevin Wayne");
+
+// 5 - short circuit
+
+function hasExamplesInJava(book) {
+  return book.programmingLanguage === "Java" || "No data available";
 }
 
-printBookAuthorsCount("Algorithms", "Robert Sedgewick", "Kevin Wayne");
+console.log(hasExamplesInJava(books[3]));
+
+function offersOnlineContent(books) {
+  for (let i = 0; i < books.length; ++i) {
+    books[i].onlineContent &&
+      console.log(`"${books[i].title}" provides online content`);
+  }
+}
+
+offersOnlineContent(books);
