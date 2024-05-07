@@ -36,6 +36,10 @@ const restaurant = {
       `Order received! ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(`Here is your paste with ${ing1}, ${ing2}, ${ing3}`);
+  },
 };
 
 //
@@ -53,11 +57,23 @@ console.log(...newArr);
 const newMenu = ["Bomzpakiai", ...restaurant.mainMenu];
 console.log(newMenu);
 
+// shallow copy array
 const mainMenuCopy = [...restaurant.mainMenu];
 
+// join arrays
 const fullMenu = [...restaurant.mainMenu, ...restaurant.starterMenu];
 
 console.log(fullMenu);
+
+console.log(..."Hello, world");
+
+const ingredients = [
+  prompt("ingredient 1"),
+  prompt("ingredient 2"),
+  prompt("ingredient 3"),
+];
+
+restaurant.orderPasta(...ingredients);
 
 //
 // Objects
