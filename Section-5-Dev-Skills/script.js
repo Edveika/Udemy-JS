@@ -1,5 +1,5 @@
 // Remember, we're gonna use strict mode in all scripts now!
-'use strict';
+"use strict";
 
 // const measureKelvin = function () {
 //   let measurement = {
@@ -55,7 +55,7 @@ function forecast(max_temps) {
   let forecast_str = ``;
 
   for (let i = 0; i < max_temps.length; ++i) {
-    if (typeof max_temps[i] !== 'number') continue;
+    if (typeof max_temps[i] !== "number") continue;
 
     forecast_str += `... ${max_temps[i]}C in ${i + 1} days`;
   }
