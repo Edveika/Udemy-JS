@@ -297,6 +297,8 @@ const books = [
   },
 ];
 
+// 1 - ARRAYS
+
 const [firstBook, secondBook] = books;
 
 console.table(firstBook);
@@ -305,3 +307,11 @@ console.table(secondBook);
 const [, , thirdBook] = books;
 
 console.table(thirdBook);
+
+const ratings = [
+  ["rating", 4.19],
+  ["ratingsCount", 144584],
+];
+
+const [[, rating], [, ratingsCount]] = ratings;
+console.log(rating, ratingsCount);
