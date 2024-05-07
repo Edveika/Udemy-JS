@@ -41,38 +41,38 @@ const restaurant = {
 //
 // Objects
 //
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
 
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
 
-// Mutating vars
-let a = 1337;
-let b = 7331;
-const obj = { a: 23, b: 7, c: 14 };
+// // Mutating vars
+// let a = 1337;
+// let b = 7331;
+// const obj = { a: 23, b: 7, c: 14 };
 
-({ a, b } = obj);
-console.log(a, b);
+// ({ a, b } = obj);
+// console.log(a, b);
 
-// Nested objs
-const { open, close } = openingHours.fri;
+// // Nested objs
+// const { open, close } = openingHours.fri;
 
-console.log(open, close);
+// console.log(open, close);
 
-restaurant.orderDelivery({
-  time: "22:30",
-  address: "Bubiai",
-  mainIndex: 0,
-  startIndex: 1,
-});
+// restaurant.orderDelivery({
+//   time: "22:30",
+//   address: "Bubiai",
+//   mainIndex: 0,
+//   startIndex: 1,
+// });
 
 //
 // Arrays
@@ -370,3 +370,6 @@ console.log(fiveStar, oneStar, threeStar);
 
 const { title, author, ISBN } = firstBook;
 console.log(title, author, ISBN);
+
+const { keywords: tags } = firstBook;
+console.log(tags);
