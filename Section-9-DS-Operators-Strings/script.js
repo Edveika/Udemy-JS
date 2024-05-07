@@ -347,33 +347,50 @@ const books = [
 
 const [firstBook, secondBook] = books;
 
-console.table(firstBook);
-console.table(secondBook);
+// console.table(firstBook);
+// console.table(secondBook);
 
-const [, , thirdBook] = books;
+// const [, , thirdBook] = books;
 
-console.table(thirdBook);
+// console.table(thirdBook);
 
-const ratings = [
-  ["rating", 4.19],
-  ["ratingsCount", 144584],
-];
+// const ratings = [
+//   ["rating", 4.19],
+//   ["ratingsCount", 144584],
+// ];
 
-const [[, rating], [, ratingsCount]] = ratings;
-console.log(rating, ratingsCount);
+// const [[, rating], [, ratingsCount]] = ratings;
+// console.log(rating, ratingsCount);
 
-const ratingStars = [63405, 1808];
-const [fiveStar = 0, oneStar = 0, threeStar = 0] = ratingStars;
-console.log(fiveStar, oneStar, threeStar);
+// const ratingStars = [63405, 1808];
+// const [fiveStar = 0, oneStar = 0, threeStar = 0] = ratingStars;
+// console.log(fiveStar, oneStar, threeStar);
 
 // 2 - Objects
 
-const { title, author, ISBN } = firstBook;
-console.log(title, author, ISBN);
+// const { title, author, ISBN } = firstBook;
+// console.log(title, author, ISBN);
 
-const { keywords: tags } = firstBook;
-console.log(tags);
+// const { keywords: tags } = firstBook;
+// console.log(tags);
 
-const sixthBook = books[6];
-const { programmingLanguage: language = "unknown" } = sixthBook;
-console.log(language);
+// const sixthBook = books[6];
+// const { programmingLanguage: language = "unknown" } = sixthBook;
+// console.log(language);
+
+let bookTitle = "unknown";
+let bookAuthor = "unknown";
+
+({ title: bookTitle } = firstBook);
+({ author: bookAuthor } = firstBook);
+
+console.log(bookTitle);
+console.log(bookAuthor);
+
+const {
+  thirdParty: {
+    goodreads: { rating },
+  },
+} = books[0];
+
+console.log(rating);
