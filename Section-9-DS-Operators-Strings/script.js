@@ -47,6 +47,14 @@ console.log(restaurantName, hours, tags);
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
 
+// Mutating vars
+let a = 1337;
+let b = 7331;
+const obj = { a: 23, b: 7, c: 14 };
+
+({ a, b } = obj);
+console.log(a, b);
+
 // Arrays
 
 // const arr = [2, 3, 4];
