@@ -47,21 +47,33 @@ const restaurant = {
 //
 
 // REST because its on leftside of equal
-const [a, b, ...others] = [1, 2, 3, 4, 5];
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
 
-console.log(a, b, others);
+// console.log(a, b, others);
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
 
-console.log(pizza, risotto, otherFood);
+// console.log(pizza, risotto, otherFood);
 
-// rest with objects
+// // rest with objects
 
-const { sat, ...otherDays } = restaurant.openingHours;
-console.log(sat, otherDays);
+// const { sat, ...otherDays } = restaurant.openingHours;
+// console.log(sat, otherDays);
+
+function add(...nums) {
+  let sum = 0;
+
+  for (let i = 0; i < nums.length; ++i) {
+    sum += nums[i];
+  }
+
+  return sum;
+}
+
+console.log(add(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
 //
 // Spread operator ...arr(unpacks array)
