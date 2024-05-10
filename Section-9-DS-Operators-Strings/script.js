@@ -704,3 +704,12 @@ console.log(players1Final);
 
 const { team1, x: draw, team2 } = game.odds;
 console.log(team1, draw, team2);
+
+function printGoals(...players) {
+  for (let i = 0; i < players.length; ++i) console.log(players[i]);
+  console.log(`Goal count: ${players.length}`);
+}
+
+printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
+printGoals(...game.players[0]);
+printGoals(...game.players[1]);
