@@ -588,7 +588,13 @@ const books = [
 
 // 6 - Nullish operator
 
+// for (let i = 0; i < books.length; ++i) {
+//   books[i].onlineContent ??
+//     console.log(`${books[i].title} provides no data about its online content`);
+// }
+
+// 7 - Logical assignment operators
+
 for (let i = 0; i < books.length; ++i) {
-  books[i].onlineContent ??
-    console.log(`${books[i].title} provides no data about its online content`);
+  books[i].edition ||= 1;
 }
