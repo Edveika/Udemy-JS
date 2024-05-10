@@ -697,5 +697,7 @@ console.log("Goal keeper: ", gk);
 console.log("Others: ", others);
 
 const allPlayers = [...players1, ...players2];
-
 console.log(allPlayers);
+
+const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
+console.log(players1Final);
