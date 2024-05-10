@@ -713,3 +713,6 @@ function printGoals(...players) {
 printGoals("Davies", "Muller", "Lewandowski", "Kimmich");
 printGoals(...game.players[0]);
 printGoals(...game.players[1]);
+
+team1 < team2 && console.log("Team1");
+team2 < team1 && console.log("Team2");
