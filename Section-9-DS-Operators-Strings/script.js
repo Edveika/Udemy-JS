@@ -595,6 +595,10 @@ const books = [
 
 // 7 - Logical assignment operators
 
+// for (let i = 0; i < books.length; ++i) {
+//   books[i].edition ||= 1;
+// }
+
 for (let i = 0; i < books.length; ++i) {
-  books[i].edition ||= 1;
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
 }
