@@ -750,7 +750,7 @@ for (const [index, value] of Object.entries(
 console.log(entries);
 
 const entries2 = Object.entries(books[0].thirdParty.goodreads);
-console.log(entries2);
+console.log(entries, entries2);
 
 //
 //
