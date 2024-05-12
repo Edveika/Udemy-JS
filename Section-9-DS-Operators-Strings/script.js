@@ -74,6 +74,11 @@ for (const day of days) {
 // optional chaining on functions
 console.log(restaurant.orderRizz?.(0, 1) ?? "method doesnt exist");
 
+// array optional chaining
+const users = [{ name: "Edvis", email: "sjd@gmail.com" }];
+
+console.log(users[0]?.name ?? "user arr empty");
+
 //
 // For of loop
 //
