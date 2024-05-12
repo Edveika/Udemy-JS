@@ -947,3 +947,10 @@ for (const value of Object.values(game.odds)) {
 }
 avgOdd /= Object.values(game.odds).length;
 console.log(avgOdd);
+
+// 3.
+const properties = Object.entries(game);
+
+console.log(`Odd of victory ${properties[0][1]}: ${properties[6][1].team1}`);
+console.log(`Odd of draw: ${properties[6][1].x}`);
+console.log(`Odd of victory ${properties[1][1]}: ${properties[6][1].team2}`);
