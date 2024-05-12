@@ -631,22 +631,39 @@ const books = [
 
 // 8 - for of loop
 
-let pageSum = 0;
-for (const book of books) {
-  pageSum += book.pages;
-}
-console.log(`Total pages: ${pageSum}`);
+// let pageSum = 0;
+// for (const book of books) {
+//   pageSum += book.pages;
+// }
+// console.log(`Total pages: ${pageSum}`);
 
-const allAuthors = [];
-for (const book of books) {
-  if (typeof book.author === "object") allAuthors.push(...book.author);
-  else allAuthors.push(book.author);
-}
-console.log(allAuthors);
+// const allAuthors = [];
+// for (const book of books) {
+//   if (typeof book.author === "object") allAuthors.push(...book.author);
+//   else allAuthors.push(book.author);
+// }
+// console.log(allAuthors);
 
-for (const author of allAuthors.entries()) {
-  console.log(author[0] + 1, author[1]);
-}
+// for (const author of allAuthors.entries()) {
+//   console.log(author[0] + 1, author[1]);
+// }
+
+// 9 - Enhanced object literals
+
+const bookData = [
+  ["title", "Computer Networking: A Top-Down Approach"],
+  ["author", ["James F. Kurose", "Keith W. Ross"]],
+  ["publisher", "Addison Wesley"],
+];
+
+const newBook = {
+  [bookData[0][0]]: bookData[0][1],
+  [bookData[1][0]]: bookData[1][1],
+  [bookData[2][0]]: bookData[2][1],
+  // ...
+};
+
+console.log(newBook);
 
 //
 //
