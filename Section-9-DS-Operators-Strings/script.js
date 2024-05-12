@@ -742,14 +742,15 @@ for (const key of Object.keys(books[0].thirdParty.goodreads)) {
 }
 console.log(entries);
 
-console.log(Object.entries(books[0].thirdParty.goodreads));
-
 for (const [index, value] of Object.entries(
   books[0].thirdParty.goodreads
 ).entries()) {
   entries[index] = value;
 }
 console.log(entries);
+
+const entries2 = Object.entries(books[0].thirdParty.goodreads);
+console.log(entries2);
 
 //
 //
