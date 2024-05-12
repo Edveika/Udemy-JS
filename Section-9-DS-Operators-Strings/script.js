@@ -632,12 +632,17 @@ const books = [
 // 8 - for of loop
 
 let pageSum = 0;
-
 for (const book of books) {
   pageSum += book.pages;
 }
-
 console.log(`Total pages: ${pageSum}`);
+
+const allAuthors = [];
+for (const book of books) {
+  if (typeof book.author === "object") allAuthors.push(...book.author);
+  else allAuthors.push(book.author);
+}
+console.log(allAuthors);
 
 //
 //
