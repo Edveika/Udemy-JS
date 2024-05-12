@@ -62,7 +62,7 @@ if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
 // same as. if mon exist, open will print. otherwise undefined will be returned
-console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant?.openingHours?.mon?.open);
 
 //
 // For of loop
