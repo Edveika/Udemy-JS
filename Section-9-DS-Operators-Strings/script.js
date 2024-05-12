@@ -737,11 +737,18 @@ const books = [
 // 11 - looping objects
 
 const entries = [];
-
 for (const key of Object.keys(books[0].thirdParty.goodreads)) {
   entries.push(key);
 }
+console.log(entries);
 
+console.log(Object.entries(books[0].thirdParty.goodreads));
+
+for (const [index, value] of Object.entries(
+  books[0].thirdParty.goodreads
+).entries()) {
+  entries[index] = value;
+}
 console.log(entries);
 
 //
