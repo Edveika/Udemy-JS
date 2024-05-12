@@ -939,3 +939,11 @@ const game = {
 for (const [index, name] of game.scored.entries()) {
   console.log(`Goal ${index + 1}: ${name}`);
 }
+
+// 2.
+let avgOdd = 0;
+for (const value of Object.values(game.odds)) {
+  avgOdd += value;
+}
+avgOdd /= Object.values(game.odds).length;
+console.log(avgOdd);
