@@ -644,6 +644,10 @@ for (const book of books) {
 }
 console.log(allAuthors);
 
+for (const author of allAuthors.entries()) {
+  console.log(author[0] + 1, author[1]);
+}
+
 //
 //
 // Challange #1
