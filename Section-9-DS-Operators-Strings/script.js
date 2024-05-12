@@ -629,6 +629,16 @@ const books = [
 //   books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 4.2);
 // }
 
+// 8 - for of loop
+
+let pageSum = 0;
+
+for (const book of books) {
+  pageSum += book.pages;
+}
+
+console.log(`Total pages: ${pageSum}`);
+
 //
 //
 // Challange #1
