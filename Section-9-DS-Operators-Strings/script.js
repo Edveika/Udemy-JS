@@ -55,6 +55,36 @@ const restaurant = {
 };
 
 //
+// Object looping
+//
+
+// Property names
+const properties = Object.keys(openingHours);
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const day of properties) {
+  console.log(day);
+  openStr += `${day}, `;
+}
+
+console.log(openStr);
+
+// Property values
+const values = Object.values(openingHours);
+
+for (const value of values) {
+  console.log(value);
+}
+
+// Entire obj
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open}, close at ${close}`);
+}
+
+//
 // Optional chaning (?.)
 //
 
@@ -696,13 +726,13 @@ const books = [
 
 // 10 - optional chaining
 
-function getFirstKeyword(book) {
-  return book.keywords?.[0];
-}
+// function getFirstKeyword(book) {
+//   return book.keywords?.[0];
+// }
 
-for (const book of books) {
-  console.log(getFirstKeyword(book));
-}
+// for (const book of books) {
+//   console.log(getFirstKeyword(book));
+// }
 
 //
 //
