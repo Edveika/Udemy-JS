@@ -58,26 +58,26 @@ const restaurant = {
 // Optional chaning (?.)
 //
 
-if (restaurant.openingHours && restaurant.openingHours.mon)
-  console.log(restaurant.openingHours.mon.open);
+// if (restaurant.openingHours && restaurant.openingHours.mon)
+//   console.log(restaurant.openingHours.mon.open);
 
-// same as. if mon exist, open will print. otherwise undefined will be returned
-console.log(restaurant?.openingHours?.mon?.open);
+// // same as. if mon exist, open will print. otherwise undefined will be returned
+// console.log(restaurant?.openingHours?.mon?.open);
 
-const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-for (const day of days) {
-  console.log();
-  const open = restaurant.openingHours[day]?.open ?? "closed";
-  console.log(`On ${day} we are open at ${open}`);
-}
+// const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+// for (const day of days) {
+//   console.log();
+//   const open = restaurant.openingHours[day]?.open ?? "closed";
+//   console.log(`On ${day} we are open at ${open}`);
+// }
 
-// optional chaining on functions
-console.log(restaurant.orderRizz?.(0, 1) ?? "method doesnt exist");
+// // optional chaining on functions
+// console.log(restaurant.orderRizz?.(0, 1) ?? "method doesnt exist");
 
-// array optional chaining
-const users = [{ name: "Edvis", email: "sjd@gmail.com" }];
+// // array optional chaining
+// const users = [{ name: "Edvis", email: "sjd@gmail.com" }];
 
-console.log(users[0]?.name ?? "user arr empty");
+// console.log(users[0]?.name ?? "user arr empty");
 
 //
 // For of loop
@@ -693,6 +693,16 @@ const books = [
 //   pages,
 // };
 // console.log(newBook2.pages);
+
+// 10 - optional chaining
+
+function getFirstKeyword(book) {
+  return book.keywords?.[0];
+}
+
+for (const book of books) {
+  console.log(getFirstKeyword(book));
+}
 
 //
 //
