@@ -827,9 +827,7 @@ const books = [
 //   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
 //   date: "Nov 9th, 2037",
 //   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
+//     team1: 1.33,scorers[scorer]
 //   },
 // };
 
@@ -954,3 +952,11 @@ const properties = Object.entries(game);
 console.log(`Odd of victory ${properties[0][1]}: ${properties[6][1].team1}`);
 console.log(`Odd of draw: ${properties[6][1].x}`);
 console.log(`Odd of victory ${properties[1][1]}: ${properties[6][1].team2}`);
+
+// 4.
+let scorers = {};
+for (const scorer of game.scored) {
+  scorers[scorer] ? ++scorers[scorer] : (scorers[scorer] = 1);
+}
+
+console.log(scorers);
