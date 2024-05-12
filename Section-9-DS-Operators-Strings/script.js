@@ -4,6 +4,21 @@
 const flights =
   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
+const openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
+  },
+};
+
 // Data needed for first part of the section
 const restaurant = {
   name: "Classico Italiano",
@@ -11,37 +26,26 @@ const restaurant = {
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
+  // ES6 enhanced obj literal
+  // Stores openingHours obj into openingHours var
+  openingHours,
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-
-  order: function (i_startMenu, i_mainIndex) {
+  // ES6 dont need function expression
+  order(i_startMenu, i_mainIndex) {
     return [this.starterMenu[i_startMenu], this.mainMenu[i_mainIndex]];
   },
 
-  orderDelivery: function ({ time, address, startIndex = 0, mainIndex = 0 }) {
+  orderDelivery({ time, address, startIndex = 0, mainIndex = 0 }) {
     console.log(
       `Order received! ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
 
-  orderPasta: function (ing1, ing2, ing3) {
+  orderPasta(ing1, ing2, ing3) {
     console.log(`Here is your paste with ${ing1}, ${ing2}, ${ing3}`);
   },
 
-  orderPizza: function (mainIngredient, ...otherIngredients) {
+  orderPizza(mainIngredient, ...otherIngredients) {
     console.log(
       `Main ingredient: ${mainIngredient}, other ingredients: ${otherIngredients}`
     );
@@ -49,20 +53,24 @@ const restaurant = {
 };
 
 //
+// Enhanced object literals
+//
+
+//
 // For of loop
 //
 
-const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-for (const item of menu) console.log(item);
+// for (const item of menu) console.log(item);
 
-// index and element
-for (const item of menu.entries()) {
-  console.log(item);
-}
+// // index and element
+// for (const item of menu.entries()) {
+//   console.log(item);
+// }
 
-// index and element destructure
-for (const [index, item] of menu.entries()) console.log(index, item);
+// // index and element destructure
+// for (const [index, item] of menu.entries()) console.log(index, item);
 
 //
 // Logical assignment
