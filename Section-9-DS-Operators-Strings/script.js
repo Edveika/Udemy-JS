@@ -71,6 +71,9 @@ for (const day of days) {
   console.log(`On ${day} we are open at ${open}`);
 }
 
+// optional chaining on functions
+console.log(restaurant.orderRizz?.(0, 1) ?? "method doesnt exist");
+
 //
 // For of loop
 //
