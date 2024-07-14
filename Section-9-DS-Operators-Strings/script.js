@@ -58,44 +58,44 @@ const restaurant = {
 // Sets
 //
 
-const ordersSet = new Set([
-  "Pasta",
-  "Pizza",
-  "Pizza",
-  "Risotto",
-  "Pasta",
-  "Pizza",
-]);
+// const ordersSet = new Set([
+//   "Pasta",
+//   "Pizza",
+//   "Pizza",
+//   "Risotto",
+//   "Pasta",
+//   "Pizza",
+// ]);
 
-console.log(ordersSet);
+// console.log(ordersSet);
 
-// strings are iterables
-console.log(new Set("Edvinas"));
+// // strings are iterables
+// console.log(new Set("Edvinas"));
 
-console.log(ordersSet.size);
+// console.log(ordersSet.size);
 
-console.log(ordersSet.has('Pizza'));
-console.log(ordersSet.has('Bread'));
-// Only one will be added
-ordersSet.add('Bread');
-ordersSet.add('Bread');
-ordersSet.delete('Bread');
+// console.log(ordersSet.has('Pizza'));
+// console.log(ordersSet.has('Bread'));
+// // Only one will be added
+// ordersSet.add('Bread');
+// ordersSet.add('Bread');
+// ordersSet.delete('Bread');
 
-// Deletes everything
-// ordersSet.clear();
+// // Deletes everything
+// // ordersSet.clear();
 
-// Iterate over set
-for (const order of ordersSet) console.log(order);
+// // Iterate over set
+// for (const order of ordersSet) console.log(order);
 
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef'];
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef'];
 
-// Make unique array of staff
-const uniqueStaff = [...new Set(staff)];
+// // Make unique array of staff
+// const uniqueStaff = [...new Set(staff)];
 
-console.log(uniqueStaff);
+// console.log(uniqueStaff);
 
-// Get length of a set directly
-console.log(new Set('Edvinas').size);
+// // Get length of a set directly
+// console.log(new Set('Edvinas').size);
 
 //
 // Object looping
@@ -1002,3 +1002,18 @@ const books = [
 // }
 
 // console.log(scorers);
+
+//
+// Practice: Sets
+//
+
+let allKeywords = [];
+
+for (const book of books)
+  allKeywords.push(...book.keywords);
+
+
+ allKeywords = [...new Set(allKeywords)];
+
+// Unique keywords
+console.log(allKeywords);
