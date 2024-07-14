@@ -75,6 +75,7 @@ console.log(Object.entries(openingHours));
 const hoursMap = new Map(Object.entries.openingHours);
 console.log(hoursMap);
 
+for (const [key, value] of question) console.log(key, value);
 
 //
 // Maps
