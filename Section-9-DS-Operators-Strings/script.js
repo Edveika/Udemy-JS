@@ -1009,14 +1009,16 @@ const books = [
 
 let allKeywords = [];
 
-for (const book of books)
-  allKeywords.push(...book.keywords);
+for (const book of books) allKeywords.push(...book.keywords);
 
 // Unique keywords
 console.log(allKeywords);
 
 // Turn array to set
-uniqueKeywords = new Set(allKeywords);
+let uniqueKeywords = new Set(allKeywords);
 
-uniqueKeywords.add('coding');
-uniqueKeywords.add('science');
+uniqueKeywords.add("coding");
+uniqueKeywords.add("science");
+uniqueKeywords.delete("business");
+
+console.log(uniqueKeywords);
