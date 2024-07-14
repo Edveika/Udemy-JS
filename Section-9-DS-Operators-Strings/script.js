@@ -55,6 +55,23 @@ const restaurant = {
 };
 
 //
+// Maps pt2
+//
+
+const question = new Map( [
+  ["question", "what is the best coding language"],
+  [1, "C"],
+  [2, "Java"],
+  [3, "JavaScript"],
+  ["correct", 3],
+  [true, "Correct!"],
+  [false, "Try again :("],
+]);
+
+console.log(question);
+
+
+//
 // Maps
 //
 
@@ -1073,14 +1090,14 @@ const books = [
 // Practice: Maps
 //
 
-const bookMap = new Map([['title', 'Clean Code'], ['author', 'Robert C. Martin']]);
+// const bookMap = new Map([['title', 'Clean Code'], ['author', 'Robert C. Martin']]);
 
-bookMap.set('pages', 464);
+// bookMap.set('pages', 464);
 
-console.log(bookMap);
+// console.log(bookMap);
 
-console.log(`"${bookMap.get('title')} by ${bookMap.get('author')}"`)
+// console.log(`"${bookMap.get('title')} by ${bookMap.get('author')}"`)
 
-console.log(bookMap.size)
+// console.log(bookMap.size)
 
-if (bookMap.get('author')) console.log('The author of the book is known');
+// if (bookMap.get('author')) console.log('The author of the book is known');
