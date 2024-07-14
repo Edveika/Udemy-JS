@@ -69,6 +69,10 @@ console.log(rest);
 console.log(rest.get(true));
 console.log(rest.get(false));
 
+const time = 21;
+
+console.log(rest.get(time <= rest.get('close') && time >= rest.get('open')));
+
 //
 // Sets
 //
