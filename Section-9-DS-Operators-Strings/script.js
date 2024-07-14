@@ -1022,3 +1022,11 @@ uniqueKeywords.add("science");
 uniqueKeywords.delete("business");
 
 console.log(uniqueKeywords);
+
+// add set values to array
+let uniqueKeywordsArr = [...uniqueKeywords];
+
+console.log(uniqueKeywordsArr);
+
+// clear the set
+uniqueKeywords.clear();
