@@ -94,6 +94,9 @@ const uniqueStaff = [...new Set(staff)];
 
 console.log(uniqueStaff);
 
+// Get length of a set directly
+console.log(new Set('Edvinas').size);
+
 //
 // Object looping
 //
