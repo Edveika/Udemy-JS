@@ -1075,4 +1075,6 @@ const books = [
 
 const bookMap = new Map([['title', 'Clean Code'], ['author', 'Robert C. Martin']]);
 
+bookMap.set('pages', 464);
+
 console.log(bookMap);
