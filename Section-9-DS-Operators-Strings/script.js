@@ -72,6 +72,28 @@ console.log(ordersSet);
 // strings are iterables
 console.log(new Set("Edvinas"));
 
+console.log(ordersSet.size);
+
+console.log(ordersSet.has('Pizza'));
+console.log(ordersSet.has('Bread'));
+// Only one will be added
+ordersSet.add('Bread');
+ordersSet.add('Bread');
+ordersSet.delete('Bread');
+
+// Deletes everything
+// ordersSet.clear();
+
+// Iterate over set
+for (const order of ordersSet) console.log(order);
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef'];
+
+// Make unique array of staff
+const uniqueStaff = [...new Set(staff)];
+
+console.log(uniqueStaff);
+
 //
 // Object looping
 //
