@@ -73,6 +73,11 @@ const time = 21;
 
 console.log(rest.get(time <= rest.get('close') && time >= rest.get('open')));
 
+// removes value by key
+rest.delete(2);
+
+
+
 //
 // Sets
 //
