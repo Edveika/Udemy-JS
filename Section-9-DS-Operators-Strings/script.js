@@ -58,39 +58,39 @@ const restaurant = {
 // Maps
 //
 
-const rest = new Map();
-rest.set("name", "italija");
-rest.set(1, "picerija");
-rest.set(2, "restoranas");
-rest
-  .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
-  .set("open", 12)
-  .set("close", 23)
-  .set(true, "we are open")
-  .set(false, "we are closed");
+// const rest = new Map();
+// rest.set("name", "italija");
+// rest.set(1, "picerija");
+// rest.set(2, "restoranas");
+// rest
+//   .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
+//   .set("open", 12)
+//   .set("close", 23)
+//   .set(true, "we are open")
+//   .set(false, "we are closed");
 
-console.log(rest);
+// console.log(rest);
 
-console.log(rest.get(true));
-console.log(rest.get(false));
+// console.log(rest.get(true));
+// console.log(rest.get(false));
 
-const time = 21;
+// const time = 21;
 
-console.log(rest.get(time <= rest.get("close") && time >= rest.get("open")));
+// console.log(rest.get(time <= rest.get("close") && time >= rest.get("open")));
 
-// removes value by key
-rest.delete(2);
+// // removes value by key
+// rest.delete(2);
 
-// removes everything
-// rest.clear();
+// // removes everything
+// // rest.clear();
 
-const arr = [1, 2];
+// const arr = [1, 2];
 
-// has to be a variable, so it refers to same place in memory
-rest.set(arr, "test");
+// // has to be a variable, so it refers to same place in memory
+// rest.set(arr, "test");
 
-// has to be a variable, so it refers to same place in memory
-console.log(rest.get(arr));
+// // has to be a variable, so it refers to same place in memory
+// console.log(rest.get(arr));
 
 //
 // Sets
@@ -1068,3 +1068,11 @@ const books = [
 
 // // clear the set
 // uniqueKeywords.clear();
+
+//
+// Practice: Maps
+//
+
+const bookMap = new Map([['title', 'Clean Code'], ['author', 'Robert C. Martin']]);
+
+console.log(bookMap);
