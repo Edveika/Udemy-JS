@@ -69,6 +69,9 @@ const ordersSet = new Set([
 
 console.log(ordersSet);
 
+// strings are iterables
+console.log(new Set("Edvinas"));
+
 //
 // Object looping
 //
