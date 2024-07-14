@@ -55,6 +55,21 @@ const restaurant = {
 };
 
 //
+// Maps
+//
+
+const rest = new Map();
+rest.set("name", "italija");
+rest.set(1, "picerija");
+rest.set(2, "restoranas");
+rest.set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"]).set('open', 12).set('close', 23).set(true, 'we are open').set(false, 'we are closed');
+
+console.log(rest);
+
+console.log(rest.get(true));
+console.log(rest.get(false));
+
+//
 // Sets
 //
 
@@ -1007,26 +1022,26 @@ const books = [
 // Practice: Sets
 //
 
-let allKeywords = [];
+// let allKeywords = [];
 
-for (const book of books) allKeywords.push(...book.keywords);
+// for (const book of books) allKeywords.push(...book.keywords);
 
-// Unique keywords
-console.log(allKeywords);
+// // Unique keywords
+// console.log(allKeywords);
 
-// Turn array to set
-let uniqueKeywords = new Set(allKeywords);
+// // Turn array to set
+// let uniqueKeywords = new Set(allKeywords);
 
-uniqueKeywords.add("coding");
-uniqueKeywords.add("science");
-uniqueKeywords.delete("business");
+// uniqueKeywords.add("coding");
+// uniqueKeywords.add("science");
+// uniqueKeywords.delete("business");
 
-console.log(uniqueKeywords);
+// console.log(uniqueKeywords);
 
-// add set values to array
-let uniqueKeywordsArr = [...uniqueKeywords];
+// // add set values to array
+// let uniqueKeywordsArr = [...uniqueKeywords];
 
-console.log(uniqueKeywordsArr);
+// console.log(uniqueKeywordsArr);
 
-// clear the set
-uniqueKeywords.clear();
+// // clear the set
+// uniqueKeywords.clear();
