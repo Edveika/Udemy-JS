@@ -1082,3 +1082,5 @@ console.log(bookMap);
 console.log(`"${bookMap.get('title')} by ${bookMap.get('author')}"`)
 
 console.log(bookMap.size)
+
+if (bookMap.get('author')) console.log('The author of the book is known');
