@@ -83,6 +83,12 @@ const answer = Number(prompt('Your answer number'));
 
 console.log(question.get(answer === question.get('correct')))
 
+// map to array
+console.log([...question]);
+console.log(question.entries());
+console.log(question.keys());
+console.log(question.values());
+
 //
 // Maps
 //
