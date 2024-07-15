@@ -58,36 +58,36 @@ const restaurant = {
 // Maps pt2
 //
 
-const question = new Map( [
-  ["question", "what is the best coding language"],
-  [1, "C"],
-  [2, "Java"],
-  [3, "JavaScript"],
-  ["correct", 3],
-  [true, "Correct!"],
-  [false, "Try again :("],
-]);
+// const question = new Map( [
+//   ["question", "what is the best coding language"],
+//   [1, "C"],
+//   [2, "Java"],
+//   [3, "JavaScript"],
+//   ["correct", 3],
+//   [true, "Correct!"],
+//   [false, "Try again :("],
+// ]);
 
-console.log(question);
+// console.log(question);
 
-// Object to map
-console.log(Object.entries(openingHours));
-const hoursMap = new Map(Object.entries.openingHours);
-console.log(hoursMap);
+// // Object to map
+// console.log(Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries.openingHours);
+// console.log(hoursMap);
 
-console.log(question.get('question'));
-for (const [key, value] of question)
-  if (typeof key === 'number') console.log(`Answer ${key} : ${value}`)
+// console.log(question.get('question'));
+// for (const [key, value] of question)
+//   if (typeof key === 'number') console.log(`Answer ${key} : ${value}`)
 
-const answer = Number(prompt('Your answer number'));
+// const answer = Number(prompt('Your answer number'));
 
-console.log(question.get(answer === question.get('correct')))
+// console.log(question.get(answer === question.get('correct')))
 
-// map to array
-console.log([...question]);
-console.log(question.entries());
-console.log(question.keys());
-console.log(question.values());
+// // map to array
+// console.log([...question]);
+// console.log(question.entries());
+// console.log(question.keys());
+// console.log(question.values());
 
 //
 // Maps
@@ -1119,3 +1119,15 @@ const books = [
 // console.log(bookMap.size)
 
 // if (bookMap.get('author')) console.log('The author of the book is known');
+
+//
+// Pratice: Maps pt2
+//
+
+// book object 1st element to map
+const firstBookMap = new Map(Object.entries(books[0]));
+console.log(firstBookMap);
+
+for (const [key, value] of firstBookMap) 
+  if (typeof value === 'number')
+    console.log(key);
