@@ -1165,3 +1165,7 @@ const gameEvents = new Map([
 // 1. Make array with all events
 const events = [...gameEvents.values()];
 console.log(events);
+
+// 2. Remove unfair yellow card
+gameEvents.delete(64);
+console.log(gameEvents);
