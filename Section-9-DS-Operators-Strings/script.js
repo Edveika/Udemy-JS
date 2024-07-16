@@ -1162,3 +1162,6 @@ const gameEvents = new Map([
   [92, "🔶 Yellow card"],
 ]);
 
+// 1. Make array with all events
+const events = [...gameEvents.values()];
+console.log(events);
