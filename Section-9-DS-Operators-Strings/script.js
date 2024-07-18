@@ -74,6 +74,9 @@ console.log(airline.lastIndexOf('r'));
 // Pos of a word
 console.log(airline.indexOf('Portugal'));
 
+// Splits a str at index 4(substr)
+console.log(airline.slice(4))
+
 //
 // Maps pt2
 //
