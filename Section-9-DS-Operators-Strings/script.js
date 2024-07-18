@@ -67,6 +67,10 @@ console.log(airline[0]);
 // Str length
 console.log(airline.length);
 
+// Position of letter in str
+console.log(airline.indexOf('r'));
+console.log(airline.lastIndexOf('r'));
+
 //
 // Maps pt2
 //
