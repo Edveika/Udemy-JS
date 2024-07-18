@@ -77,6 +77,9 @@ console.log(airline.indexOf('Portugal'));
 // Splits a str at index 4(substr)
 console.log(airline.slice(4))
 
+// substr end parameter
+console.log(airline.slice(4, 7))
+
 //
 // Maps pt2
 //
