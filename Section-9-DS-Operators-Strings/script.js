@@ -80,6 +80,12 @@ console.log(airline.slice(4))
 // substr end parameter
 console.log(airline.slice(4, 7))
 
+// Slice str from start to first space
+console.log(airline.slice(0,airline.indexOf(' ')));
+
+// Slice str from last space excluding it
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
 //
 // Maps pt2
 //
