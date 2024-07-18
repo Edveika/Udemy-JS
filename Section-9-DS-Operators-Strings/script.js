@@ -55,6 +55,16 @@ const restaurant = {
 };
 
 //
+// Strings pt 1
+//
+
+const airline = 'TAP air Portugal';
+const plane = 'A320';
+
+// First letter or airline
+console.log(airline[0]);
+
+//
 // Maps pt2
 //
 
@@ -1148,34 +1158,34 @@ Let's continue with our football betting app! This time, we have a map with a lo
 GOOD LUCK 😀
 */
 
-const gameEvents = new Map([
-  [17, "⚽️ GOAL"],
-  [36, "🔁 Substitution"],
-  [47, "⚽️ GOAL"],
-  [61, "🔁 Substitution"],
-  [64, "🔶 Yellow card"],
-  [69, "🔴 Red card"],
-  [70, "🔁 Substitution"],
-  [72, "🔁 Substitution"],
-  [76, "⚽️ GOAL"],
-  [80, "⚽️ GOAL"],
-  [92, "🔶 Yellow card"],
-]);
+// const gameEvents = new Map([
+//   [17, "⚽️ GOAL"],
+//   [36, "🔁 Substitution"],
+//   [47, "⚽️ GOAL"],
+//   [61, "🔁 Substitution"],
+//   [64, "🔶 Yellow card"],
+//   [69, "🔴 Red card"],
+//   [70, "🔁 Substitution"],
+//   [72, "🔁 Substitution"],
+//   [76, "⚽️ GOAL"],
+//   [80, "⚽️ GOAL"],
+//   [92, "🔶 Yellow card"],
+// ]);
 
-// 1. Make array with all events
-const events = [...gameEvents.values()];
-console.log(events);
+// // 1. Make array with all events
+// const events = [...gameEvents.values()];
+// console.log(events);
 
-// 2. Remove unfair yellow card
-gameEvents.delete(64);
-console.log(gameEvents);
+// // 2. Remove unfair yellow card
+// gameEvents.delete(64);
+// console.log(gameEvents);
 
-// 3. Average event time
-console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
+// // 3. Average event time
+// console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
 
-// 4. game halfs
-for (const [key, value] of gameEvents)
-  if (key < 45)
-    console.log(`[FIRST HALF] ${key}: ${value}`);
-  else
-  console.log(`[Second HALF] ${key}: ${value}`);
+// // 4. game halfs
+// for (const [key, value] of gameEvents)
+//   if (key < 45)
+//     console.log(`[FIRST HALF] ${key}: ${value}`);
+//   else
+//   console.log(`[Second HALF] ${key}: ${value}`);
