@@ -1240,3 +1240,8 @@ console.log(
   books[0].ISBN[9],
   books[0].ISBN[8]
 );
+
+// 2. Below is the quote variable that stores a string. Find the index of the word 'chess', and log it to the console.
+const quote = 'A computer once beat me at chess, but it was no match for me at kick boxing';
+
+console.log(quote.slice(quote.indexOf('chess'), quote.indexOf(',')));
