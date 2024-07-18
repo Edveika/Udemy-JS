@@ -1245,3 +1245,6 @@ console.log(
 const quote = 'A computer once beat me at chess, but it was no match for me at kick boxing';
 
 console.log(quote.slice(quote.indexOf('chess'), quote.indexOf(',')));
+
+// 3. Extract the word "boxing" from the same quote string, and log it to the console.
+console.log(quote.slice(quote.indexOf('boxing')));
