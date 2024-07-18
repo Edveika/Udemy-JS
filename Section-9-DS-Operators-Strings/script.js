@@ -89,8 +89,19 @@ console.log(airline.slice(airline.lastIndexOf(" ") + 1));
 // negative pos(from back)
 console.log(airline.slice(-5));
 
-// end as negative pos 
+// end as negative pos
 console.log(airline.slice(1, -1));
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  if (seat.lastIndexOf("B") !== -1 || seat.lastIndexOf("E") !== -1)
+    console.log("Seat is in the middle");
+  else console.log("Seat is not in the middle");
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
 
 //
 // Maps pt2
