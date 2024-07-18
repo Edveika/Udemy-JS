@@ -58,11 +58,14 @@ const restaurant = {
 // Strings pt 1
 //
 
-const airline = 'TAP air Portugal';
-const plane = 'A320';
+const airline = "TAP air Portugal";
+const plane = "A320";
 
 // First letter or airline
 console.log(airline[0]);
+
+// Str length
+console.log(airline.length);
 
 //
 // Maps pt2
