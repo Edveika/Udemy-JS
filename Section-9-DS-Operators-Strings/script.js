@@ -1242,9 +1242,19 @@ console.log(
 );
 
 // 2. Below is the quote variable that stores a string. Find the index of the word 'chess', and log it to the console.
-const quote = 'A computer once beat me at chess, but it was no match for me at kick boxing';
+const quote =
+  "A computer once beat me at chess, but it was no match for me at kick boxing";
 
-console.log(quote.slice(quote.indexOf('chess'), quote.indexOf(',')));
+console.log(quote.slice(quote.indexOf("chess"), quote.indexOf(",")));
 
 // 3. Extract the word "boxing" from the same quote string, and log it to the console.
-console.log(quote.slice(quote.indexOf('boxing')));
+console.log(quote.slice(quote.indexOf("boxing")));
+
+// 4.
+function isContributor(author) {
+  if (author.indexOf("(Contributor)") !== -1) return true;
+  return false;
+}
+
+console.log(isContributor('Julie Sussman (Contributor)'));
+console.log(isContributor('Julie Sussman'));
