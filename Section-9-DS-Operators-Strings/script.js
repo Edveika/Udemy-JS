@@ -71,6 +71,9 @@ console.log(airline.length);
 console.log(airline.indexOf('r'));
 console.log(airline.lastIndexOf('r'));
 
+// Pos of a word
+console.log(airline.indexOf('Portugal'));
+
 //
 // Maps pt2
 //
