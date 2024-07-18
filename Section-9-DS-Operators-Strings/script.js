@@ -58,50 +58,50 @@ const restaurant = {
 // Strings pt 1
 //
 
-const airline = "TAP air Portugal";
-const plane = "A320";
+// const airline = "TAP air Portugal";
+// const plane = "A320";
 
-// First letter or airline
-console.log(airline[0]);
+// // First letter or airline
+// console.log(airline[0]);
 
-// Str length
-console.log(airline.length);
+// // Str length
+// console.log(airline.length);
 
-// Position of letter in str
-console.log(airline.indexOf("r"));
-console.log(airline.lastIndexOf("r"));
+// // Position of letter in str
+// console.log(airline.indexOf("r"));
+// console.log(airline.lastIndexOf("r"));
 
-// Pos of a word
-console.log(airline.indexOf("Portugal"));
+// // Pos of a word
+// console.log(airline.indexOf("Portugal"));
 
-// Splits a str at index 4(substr)
-console.log(airline.slice(4));
+// // Splits a str at index 4(substr)
+// console.log(airline.slice(4));
 
-// substr end parameter
-console.log(airline.slice(4, 7));
+// // substr end parameter
+// console.log(airline.slice(4, 7));
 
-// Slice str from start to first space
-console.log(airline.slice(0, airline.indexOf(" ")));
+// // Slice str from start to first space
+// console.log(airline.slice(0, airline.indexOf(" ")));
 
-// Slice str from last space excluding it
-console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+// // Slice str from last space excluding it
+// console.log(airline.slice(airline.lastIndexOf(" ") + 1));
 
-// negative pos(from back)
-console.log(airline.slice(-5));
+// // negative pos(from back)
+// console.log(airline.slice(-5));
 
-// end as negative pos
-console.log(airline.slice(1, -1));
+// // end as negative pos
+// console.log(airline.slice(1, -1));
 
-const checkMiddleSeat = function (seat) {
-  // B and E are middle seats
-  if (seat.lastIndexOf("B") !== -1 || seat.lastIndexOf("E") !== -1)
-    console.log("Seat is in the middle");
-  else console.log("Seat is not in the middle");
-};
+// const checkMiddleSeat = function (seat) {
+//   // B and E are middle seats
+//   if (seat.lastIndexOf("B") !== -1 || seat.lastIndexOf("E") !== -1)
+//     console.log("Seat is in the middle");
+//   else console.log("Seat is not in the middle");
+// };
 
-checkMiddleSeat("11B");
-checkMiddleSeat("23C");
-checkMiddleSeat("3E");
+// checkMiddleSeat("11B");
+// checkMiddleSeat("23C");
+// checkMiddleSeat("3E");
 
 //
 // Maps pt2
@@ -1228,3 +1228,15 @@ GOOD LUCK 😀
 //     console.log(`[FIRST HALF] ${key}: ${value}`);
 //   else
 //   console.log(`[Second HALF] ${key}: ${value}`);
+
+//
+// Practice: Strings pt1
+//
+
+// 1. Take the ISBN property of the first book from the books array, and log to the console characters at index 6, 4, 9 and 8. Use bracket notation to access individual characters.
+console.log(
+  books[0].ISBN[6],
+  books[0].ISBN[4],
+  books[0].ISBN[9],
+  books[0].ISBN[8]
+);
