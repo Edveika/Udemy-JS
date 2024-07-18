@@ -68,23 +68,29 @@ console.log(airline[0]);
 console.log(airline.length);
 
 // Position of letter in str
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
+console.log(airline.indexOf("r"));
+console.log(airline.lastIndexOf("r"));
 
 // Pos of a word
-console.log(airline.indexOf('Portugal'));
+console.log(airline.indexOf("Portugal"));
 
 // Splits a str at index 4(substr)
-console.log(airline.slice(4))
+console.log(airline.slice(4));
 
 // substr end parameter
-console.log(airline.slice(4, 7))
+console.log(airline.slice(4, 7));
 
 // Slice str from start to first space
-console.log(airline.slice(0,airline.indexOf(' ')));
+console.log(airline.slice(0, airline.indexOf(" ")));
 
 // Slice str from last space excluding it
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+
+// negative pos(from back)
+console.log(airline.slice(-5));
+
+// end as negative pos 
+console.log(airline.slice(1, -1));
 
 //
 // Maps pt2
