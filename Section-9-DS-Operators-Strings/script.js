@@ -71,8 +71,17 @@ console.log('yolo'.toUpperCase());
 const passenger = 'edvInas';
 const passengerLower = passenger.toLowerCase();
 const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
-
 console.log(passengerCorrect);
+
+// Comparing emails
+const email = 'hello@edvis.com';
+const loginEmail = '    hello@edvis.Com \n';
+
+const lowerEmail = email.toLowerCase();
+const trimmedEmail = lowerEmail.trim();
+const normalizedEmail = loginEmail.toLocaleLowerCase().trim();
+
+console.log(email === normalizedEmail);
 
 //
 // Strings pt 1
