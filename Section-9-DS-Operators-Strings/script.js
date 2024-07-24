@@ -58,68 +58,68 @@ const restaurant = {
 // Strings pt 2
 //
 
-const airline = "TAP air Portugal";
+// const airline = "TAP air Portugal";
 
-// Convert string to lower/upper case
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
+// // Convert string to lower/upper case
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
 
-//can be called directly on the string
-console.log('yolo'.toUpperCase());
+// //can be called directly on the string
+// console.log('yolo'.toUpperCase());
 
-// fixing caps in name
-const passenger = 'edvInas';
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+// // fixing caps in name
+// const passenger = 'edvInas';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
 
-// Comparing emails
-const email = 'hello@edvis.com';
-const loginEmail = '    hello@edvis.Com \n';
+// // Comparing emails
+// const email = 'hello@edvis.com';
+// const loginEmail = '    hello@edvis.Com \n';
 
-const lowerEmail = email.toLowerCase();
-const trimmedEmail = lowerEmail.trim();
-const normalizedEmail = loginEmail.toLocaleLowerCase().trim();
+// const lowerEmail = email.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// const normalizedEmail = loginEmail.toLocaleLowerCase().trim();
 
-console.log(email === normalizedEmail);
+// console.log(email === normalizedEmail);
 
-// replacing parts of strings
-const priceUS = '288.97$';
-const priceEU = priceUS.replace('$', '€').replace('.', ',');
-console.log(priceEU);
+// // replacing parts of strings
+// const priceUS = '288.97$';
+// const priceEU = priceUS.replace('$', '€').replace('.', ',');
+// console.log(priceEU);
 
-const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+// const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
 
-// replaces only one
-// console.log(announcement.replace('door', 'gate'));
+// // replaces only one
+// // console.log(announcement.replace('door', 'gate'));
 
-// Replaces all
-// console.log(announcement.replaceAll('door', 'gate'));
+// // Replaces all
+// // console.log(announcement.replaceAll('door', 'gate'));
 
-// Replace using expression
-console.log(announcement.replace(/door/g, 'gate'));
+// // Replace using expression
+// console.log(announcement.replace(/door/g, 'gate'));
 
-// Booleans
-const plane = 'Airbus A320neo';
-console.log(plane.includes('A320'));
-console.log(plane.includes('Boeing'));
-console.log(plane.startsWith('Air'));
+// // Booleans
+// const plane = 'Airbus A320neo';
+// console.log(plane.includes('A320'));
+// console.log(plane.includes('Boeing'));
+// console.log(plane.startsWith('Air'));
 
-if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
-  console.log('Part of new airbus family');
-}
+// if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+//   console.log('Part of new airbus family');
+// }
 
-// Quick practice
-const checkBaggage = function(items) {
-  const baggage = items.toLowerCase();
+// // Quick practice
+// const checkBaggage = function(items) {
+//   const baggage = items.toLowerCase();
 
-  if (baggage.includes('knife') || baggage.includes('gun')) console.log('you are not allowed on the plane');
-  else console.log('welcome aboard');
-  }
+//   if (baggage.includes('knife') || baggage.includes('gun')) console.log('you are not allowed on the plane');
+//   else console.log('welcome aboard');
+//   }
 
-checkBaggage('I have a laptop, some food and a pocket Knife');
-checkBaggage('Socks and camera');
-checkBaggage('Snacks and gun for protection');
+// checkBaggage('I have a laptop, some food and a pocket Knife');
+// checkBaggage('Socks and camera');
+// checkBaggage('Snacks and gun for protection');
 
 //
 // Strings pt 1
@@ -1325,3 +1325,13 @@ GOOD LUCK 😀
 
 // console.log(isContributor('Julie Sussman (Contributor)'));
 // console.log(isContributor('Julie Sussman'));
+
+//
+// Strings pt3 practice
+//
+
+function normalizeAuthorName(author) {
+  let normalizedAuthor = author.replaceAll('(Contributor)', '');
+}
+
+normalizeAuthorName('  JuliE sussMan (Contributor)');
