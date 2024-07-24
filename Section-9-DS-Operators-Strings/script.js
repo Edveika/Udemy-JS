@@ -1347,3 +1347,15 @@ console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
 const newBookTitle = books[1].title.replaceAll('Programs', 'Software');
 
 console.log(newBookTitle);
+
+// 3
+
+function logBookTheme(title) {
+  const lastWord = title.slice(title.lastIndexOf(' ') + 1);
+  //if (title.toLowerCase().includes('computer')) console.log('This book is about computers');
+  //else if (title.toLowerCase().includes('algorithms') || title.toLowerCase().includes('structures')) console.log('This book is about algorithms and data structures');
+  //else if (!title.toLowerCase().includes('operating') && )
+}
+
+logBookTheme('as dfdf fdsfsd');
+logBookTheme('as dfdf');
