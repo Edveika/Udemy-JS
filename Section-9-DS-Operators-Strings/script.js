@@ -1331,7 +1331,11 @@ GOOD LUCK 😀
 //
 
 function normalizeAuthorName(author) {
-  let normalizedAuthor = author.replaceAll('(Contributor)', '');
+  const normalizedAuthor = author.replaceAll('(Contributor)', '').toLowerCase().trim();
+  const firstName = normalizedAuthor[0].toUpperCase() + normalizedAuthor.slice(1, normalizedAuthor.indexOf(' '));
+  const lastName = normalizedAuthor[normalizedAuthor.indexOf(' ') + 1].toUpperCase() + normalizedAuthor.slice(normalizedAuthor.indexOf(' ') + 2);
+ 
+  return firstName + " " + lastName;
 }
 
-normalizeAuthorName('  JuliE sussMan (Contributor)');
+console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
