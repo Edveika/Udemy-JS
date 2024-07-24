@@ -67,6 +67,13 @@ console.log(airline.toUpperCase());
 //can be called directly on the string
 console.log('yolo'.toUpperCase());
 
+// fixing caps in name
+const passenger = 'edvInas';
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(passengerCorrect);
+
 //
 // Strings pt 1
 //
