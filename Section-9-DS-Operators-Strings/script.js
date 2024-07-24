@@ -109,6 +109,18 @@ if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
   console.log('Part of new airbus family');
 }
 
+// Quick practice
+const checkBaggage = function(items) {
+  const baggage = items.toLowerCase();
+
+  if (baggage.includes('knife') || baggage.includes('gun')) console.log('you are not allowed on the plane');
+  else console.log('welcome aboard');
+  }
+
+checkBaggage('I have a laptop, some food and a pocket Knife');
+checkBaggage('Socks and camera');
+checkBaggage('Snacks and gun for protection');
+
 //
 // Strings pt 1
 //
