@@ -1330,6 +1330,8 @@ GOOD LUCK 😀
 // Strings pt3 practice
 //
 
+// 1
+
 function normalizeAuthorName(author) {
   const normalizedAuthor = author.replaceAll('(Contributor)', '').toLowerCase().trim();
   const firstName = normalizedAuthor[0].toUpperCase() + normalizedAuthor.slice(1, normalizedAuthor.indexOf(' '));
@@ -1339,3 +1341,9 @@ function normalizeAuthorName(author) {
 }
 
 console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
+
+// 2
+
+const newBookTitle = books[1].title.replaceAll('Programs', 'Software');
+
+console.log(newBookTitle);
