@@ -86,8 +86,18 @@ console.log(email === normalizedEmail);
 // replacing parts of strings
 const priceUS = '288.97$';
 const priceEU = priceUS.replace('$', '€').replace('.', ',');
-
 console.log(priceEU);
+
+const announcement = 'All passengers come to boarding door 23. Boarding door 23!';
+
+// replaces only one
+// console.log(announcement.replace('door', 'gate'));
+
+// Replaces all
+// console.log(announcement.replaceAll('door', 'gate'));
+
+// Replace using expression
+console.log(announcement.replace(/door/g, 'gate'));
 
 //
 // Strings pt 1
