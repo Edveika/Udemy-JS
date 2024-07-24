@@ -55,6 +55,19 @@ const restaurant = {
 };
 
 //
+// Strings pt 2
+//
+
+const airline = "TAP air Portugal";
+
+// Convert string to lower/upper case
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+//can be called directly on the string
+console.log('yolo'.toUpperCase());
+
+//
 // Strings pt 1
 //
 
@@ -1233,28 +1246,28 @@ GOOD LUCK 😀
 // Practice: Strings pt1
 //
 
-// 1. Take the ISBN property of the first book from the books array, and log to the console characters at index 6, 4, 9 and 8. Use bracket notation to access individual characters.
-console.log(
-  books[0].ISBN[6],
-  books[0].ISBN[4],
-  books[0].ISBN[9],
-  books[0].ISBN[8]
-);
+// // 1. Take the ISBN property of the first book from the books array, and log to the console characters at index 6, 4, 9 and 8. Use bracket notation to access individual characters.
+// console.log(
+//   books[0].ISBN[6],
+//   books[0].ISBN[4],
+//   books[0].ISBN[9],
+//   books[0].ISBN[8]
+// );
 
-// 2. Below is the quote variable that stores a string. Find the index of the word 'chess', and log it to the console.
-const quote =
-  "A computer once beat me at chess, but it was no match for me at kick boxing";
+// // 2. Below is the quote variable that stores a string. Find the index of the word 'chess', and log it to the console.
+// const quote =
+//   "A computer once beat me at chess, but it was no match for me at kick boxing";
 
-console.log(quote.slice(quote.indexOf("chess"), quote.indexOf(",")));
+// console.log(quote.slice(quote.indexOf("chess"), quote.indexOf(",")));
 
-// 3. Extract the word "boxing" from the same quote string, and log it to the console.
-console.log(quote.slice(quote.indexOf("boxing")));
+// // 3. Extract the word "boxing" from the same quote string, and log it to the console.
+// console.log(quote.slice(quote.indexOf("boxing")));
 
-// 4.
-function isContributor(author) {
-  if (author.indexOf("(Contributor)") !== -1) return true;
-  return false;
-}
+// // 4.
+// function isContributor(author) {
+//   if (author.indexOf("(Contributor)") !== -1) return true;
+//   return false;
+// }
 
-console.log(isContributor('Julie Sussman (Contributor)'));
-console.log(isContributor('Julie Sussman'));
+// console.log(isContributor('Julie Sussman (Contributor)'));
+// console.log(isContributor('Julie Sussman'));
