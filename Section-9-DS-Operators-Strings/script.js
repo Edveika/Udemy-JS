@@ -99,6 +99,16 @@ const announcement = 'All passengers come to boarding door 23. Boarding door 23!
 // Replace using expression
 console.log(announcement.replace(/door/g, 'gate'));
 
+// Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Air'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of new airbus family');
+}
+
 //
 // Strings pt 1
 //
