@@ -54,6 +54,58 @@ const restaurant = {
   },
 };
 
+///////////////////////////////////////
+// Coding Challenge #4
+
+/* 
+Write a program that receives a list of variable names written in underscore_case and convert them to camelCase.
+
+The input will come from a textarea inserted into the DOM (see code below), and conversion will happen when the button is pressed.
+
+THIS TEST DATA (pasted to textarea)
+underscore_case
+ first_name
+Some_Variable 
+  calculate_AGE
+delayed_departure
+
+SHOULD PRODUCE THIS OUTPUT (5 separate console.log outputs)
+underscoreCase      ✅
+firstName           ✅✅
+someVariable        ✅✅✅
+calculateAge        ✅✅✅✅
+delayedDeparture    ✅✅✅✅✅
+
+HINT 1: Remember which character defines a new line in the textarea 😉
+HINT 2: The solution only needs to work for a variable made out of 2 words, like a_b
+HINT 3: Start without worrying about the ✅. Tackle that only after you have the variable name conversion working 😉
+HINT 4: This challenge is difficult on purpose, so start watching the solution in case you're stuck. Then pause and continue!
+
+Afterwards, test with your own test data!
+
+GOOD LUCK 😀
+*/
+
+const toSnakeCase = function (varNames) {
+  const lowerCaseVar = [];
+
+  for (const name of varNames) lowerCaseVar.push(name.toLowerCase());
+
+  const snakeCaseVars = [];
+  for (const variable of lowerCaseVar) {
+    const [a, b] = variable.split("_");
+    snakeCaseVars.push(a+b[0].toUpperCase() + b.slice(1));
+  }
+};
+
+toSnakeCase([
+  "underscore_case",
+  "first_name",
+  "Some_Variable",
+  "calculate_AGE",
+  "delayed_departure",
+]);
+
 //
 // Strings pt 3
 //
@@ -1416,37 +1468,36 @@ GOOD LUCK 😀
 
 // 1.
 
-const bookCategories = 'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
+// const bookCategories = 'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
 
-const logBookCategories = function(categories) {
-  const cats = categories.split(';');
+// const logBookCategories = function(categories) {
+//   const cats = categories.split(';');
 
-  for (const cat of cats) console.log(cat);
-}
+//   for (const cat of cats) console.log(cat);
+// }
 
-logBookCategories(bookCategories);
+// logBookCategories(bookCategories);
 
+// // 2.
 
-// 2.
+// const getKeywordsAsString = function(books) {
+//   const categories = [];
 
-const getKeywordsAsString = function(books) {
-  const categories = [];
+//   for (const book of books) categories.push(...book.keywords);
 
-  for (const book of books) categories.push(...book.keywords);
+//   const uniqueCategories = [...new Set(categories)];
 
-  const uniqueCategories = [...new Set(categories)];
+//   return uniqueCategories.join(';');
+// }
 
-  return uniqueCategories.join(';');
-} 
+// console.log(getKeywordsAsString(books));
 
-console.log(getKeywordsAsString(books));
+// // 3.
 
-// 3.
+// const bookChapters = [['The Basics', 14], ['Sorting', 254], ['Searching', 372], ['Graphs', 526], ['Strings', 706]];
 
-const bookChapters = [['The Basics', 14], ['Sorting', 254], ['Searching', 372], ['Graphs', 526], ['Strings', 706]];
+// const logBookChapters = function(chapters) {
+//   for (const chapter of chapters) console.log(chapter[0].padEnd(25, '_') + chapter[1]);
+// }
 
-const logBookChapters = function(chapters) {
-  for (const chapter of chapters) console.log(chapter[0].padEnd(25, '_') + chapter[1]);
-}
-
-logBookChapters(bookChapters);
+// logBookChapters(bookChapters);
