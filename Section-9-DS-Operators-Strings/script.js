@@ -78,6 +78,10 @@ const passenger = 'jessica ann smith davis'
 
 console.log(capitalizeName(passenger));
 
+// padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(23, '+').padEnd(35, '+'));
+
 //
 // Strings pt 2
 //
