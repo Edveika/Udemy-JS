@@ -59,42 +59,54 @@ const restaurant = {
 //
 
 // splits string into substr by + sign, returns arr
-console.log('a+very+nice+str'.split('+'));
+console.log("a+very+nice+str".split("+"));
 
-const [firstName, lastName] = 'Edvinas Kazkas'.split(' ');
-const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+const [firstName, lastName] = "Edvinas Kazkas".split(" ");
+const newName = ["Mr.", firstName, lastName.toUpperCase()].join(" ");
 console.log(newName);
 
-const capitalizeName = function(name) {
-  const names = name.split(' ');
+const capitalizeName = function (name) {
+  const names = name.split(" ");
   const capitalizedNames = [];
 
-  for (const word of names) capitalizedNames.push(word[0].toUpperCase() + word.slice(1));
+  for (const word of names)
+    capitalizedNames.push(word[0].toUpperCase() + word.slice(1));
 
-  return capitalizedNames.join(' ');
-}
+  return capitalizedNames.join(" ");
+};
 
-const passenger = 'jessica ann smith davis'
+const passenger = "jessica ann smith davis";
 
 console.log(capitalizeName(passenger));
 
 // padding
-const message = 'Go to gate 23!';
-console.log(message.padStart(23, '+').padEnd(35, '+'));
+const message = "Go to gate 23!";
+console.log(message.padStart(23, "+").padEnd(35, "+"));
 
-const maskCreditCard = function(number) {
-  const str = number + '';
+const maskCreditCard = function (number) {
+  const str = number + "";
   const last = str.slice(-4);
 
-  return last.padStart(str.length, '*');
-}
+  return last.padStart(str.length, "*");
+};
 
 console.log(maskCreditCard(236423642386492364));
-console.log(maskCreditCard('0989678958956'));
+console.log(maskCreditCard("0989678958956"));
 
 // repeat
-const message2 = 'Bad weather... All departures delayed ';
+const message2 = "Bad weather... All departures delayed ";
 console.log(message2.repeat(3));
+
+const planesInLine = function (number) {
+  console.log(
+    `There are ${number} planes waiting in line ${"✈️".repeat(number)}`
+  );
+};
+
+planesInLine(1);
+planesInLine(12);
+planesInLine(3);
+planesInLine(5);
 
 //
 // Strings pt 2
@@ -1378,7 +1390,7 @@ GOOD LUCK 😀
 //   const normalizedAuthor = author.replaceAll('(Contributor)', '').toLowerCase().trim();
 //   const firstName = normalizedAuthor[0].toUpperCase() + normalizedAuthor.slice(1, normalizedAuthor.indexOf(' '));
 //   const lastName = normalizedAuthor[normalizedAuthor.indexOf(' ') + 1].toUpperCase() + normalizedAuthor.slice(normalizedAuthor.indexOf(' ') + 2);
- 
+
 //   return firstName + " " + lastName;
 // }
 
