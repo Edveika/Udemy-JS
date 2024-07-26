@@ -86,6 +86,9 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
 const toSnakeCase = function (varNames) {
   const lowerCaseVar = [];
 
