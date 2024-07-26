@@ -1427,3 +1427,16 @@ const logBookCategories = function(categories) {
 logBookCategories(bookCategories);
 
 
+// 2.
+
+const getKeywordsAsString = function(books) {
+  const categories = [];
+
+  for (const book of books) categories.push(...book.keywords);
+
+  const uniqueCategories = [...new Set(categories)];
+
+  return uniqueCategories.join(';');
+} 
+
+console.log(getKeywordsAsString(books));
