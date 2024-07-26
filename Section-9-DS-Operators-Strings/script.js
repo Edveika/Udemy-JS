@@ -86,8 +86,8 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
-document.body.append(document.createElement('textarea'));
-document.body.append(document.createElement('button'));
+document.body.append(document.createElement("textarea"));
+document.body.append(document.createElement("button"));
 
 const toSnakeCase = function (varNames) {
   const lowerCaseVar = [];
@@ -98,19 +98,18 @@ const toSnakeCase = function (varNames) {
   for (const variable of lowerCaseVar) {
     const [a, b] = variable.split("_");
     const snakeCase = a + b[0].toUpperCase() + b.slice(1);
-    snakeCaseVars.push(snakeCase.padEnd(25) + "✅".repeat(snakeCaseVars.length + 1));
+    snakeCaseVars.push(
+      snakeCase.padEnd(25) + "✅".repeat(snakeCaseVars.length + 1)
+    );
   }
 
   for (const snake of snakeCaseVars) console.log(snake);
 };
 
-toSnakeCase([
-  "       underscore_case",
-  "first_name",
-  "Some_Variable",
-  "calculate_AGE",
-  "delayed_departure",
-]);
+document.querySelector("button").addEventListener("click", function () {
+  const values = document.querySelector("textarea").value.split("\n");
+  toSnakeCase(values);
+});
 
 //
 // Strings pt 3
