@@ -89,7 +89,7 @@ GOOD LUCK 😀
 const toSnakeCase = function (varNames) {
   const lowerCaseVar = [];
 
-  for (const name of varNames) lowerCaseVar.push(name.toLowerCase());
+  for (const name of varNames) lowerCaseVar.push(name.toLowerCase().trim());
 
   const snakeCaseVars = [];
   for (const variable of lowerCaseVar) {
@@ -102,7 +102,7 @@ const toSnakeCase = function (varNames) {
 };
 
 toSnakeCase([
-  "underscore_case",
+  "       underscore_case",
   "first_name",
   "Some_Variable",
   "calculate_AGE",
