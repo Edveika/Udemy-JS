@@ -94,8 +94,10 @@ const toSnakeCase = function (varNames) {
   const snakeCaseVars = [];
   for (const variable of lowerCaseVar) {
     const [a, b] = variable.split("_");
-    snakeCaseVars.push(a+b[0].toUpperCase() + b.slice(1));
+    snakeCaseVars.push(a+b[0].toUpperCase() + b.slice(1).padEnd(25, ' ') + '✅'.repeat(snakeCaseVars.length + 1));
   }
+
+  return snakeCaseVars;
 };
 
 toSnakeCase([
