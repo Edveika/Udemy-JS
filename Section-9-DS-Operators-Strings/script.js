@@ -62,10 +62,21 @@ const restaurant = {
 console.log('a+very+nice+str'.split('+'));
 
 const [firstName, lastName] = 'Edvinas Kazkas'.split(' ');
-
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
-
 console.log(newName);
+
+const capitalizeName = function(name) {
+  const names = name.split(' ');
+  const capitalizedNames = [];
+
+  for (const word of names) capitalizedNames.push(word[0].toUpperCase() + word.slice(1));
+
+  return capitalizedNames.join(' ');
+}
+
+const passenger = 'jessica ann smith davis'
+
+console.log(capitalizeName(passenger));
 
 //
 // Strings pt 2
