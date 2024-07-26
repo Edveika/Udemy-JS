@@ -98,7 +98,7 @@ const toSnakeCase = function (varNames) {
     snakeCaseVars.push(snakeCase.padEnd(25) + "✅".repeat(snakeCaseVars.length + 1));
   }
 
-  for (const snake of snakeCaseVars) console.log(snake, snake.length);
+  for (const snake of snakeCaseVars) console.log(snake);
 };
 
 toSnakeCase([
