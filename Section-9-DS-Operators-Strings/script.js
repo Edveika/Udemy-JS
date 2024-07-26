@@ -55,6 +55,13 @@ const restaurant = {
 };
 
 //
+// Strings pt 3
+//
+
+// splits string into substr by + sign, returns arr
+console.log('a+very+nice+str'.split('+'));
+
+//
 // Strings pt 2
 //
 
@@ -1332,29 +1339,26 @@ GOOD LUCK 😀
 
 // 1
 
-function normalizeAuthorName(author) {
-  const normalizedAuthor = author.replaceAll('(Contributor)', '').toLowerCase().trim();
-  const firstName = normalizedAuthor[0].toUpperCase() + normalizedAuthor.slice(1, normalizedAuthor.indexOf(' '));
-  const lastName = normalizedAuthor[normalizedAuthor.indexOf(' ') + 1].toUpperCase() + normalizedAuthor.slice(normalizedAuthor.indexOf(' ') + 2);
+// function normalizeAuthorName(author) {
+//   const normalizedAuthor = author.replaceAll('(Contributor)', '').toLowerCase().trim();
+//   const firstName = normalizedAuthor[0].toUpperCase() + normalizedAuthor.slice(1, normalizedAuthor.indexOf(' '));
+//   const lastName = normalizedAuthor[normalizedAuthor.indexOf(' ') + 1].toUpperCase() + normalizedAuthor.slice(normalizedAuthor.indexOf(' ') + 2);
  
-  return firstName + " " + lastName;
-}
+//   return firstName + " " + lastName;
+// }
 
-console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
+// console.log(normalizeAuthorName('  JuliE sussMan (Contributor)'));
 
-// 2
+// // 2
 
-const newBookTitle = books[1].title.replaceAll('Programs', 'Software');
+// const newBookTitle = books[1].title.replaceAll('Programs', 'Software');
 
-console.log(newBookTitle);
+// console.log(newBookTitle);
 
-// 3
+// // 3
 
-function logBookTheme(title) {
-  if (title.toLowerCase().startsWith('computer')) console.log('This book is about computers');
-  else if (title.toLowerCase().includes('algorithms') && title.toLowerCase().includes('structures')) console.log('This book is about algorithms and data structures');
-  else if (!title.toLowerCase().includes('operating') && title.endsWith('system') || title.endsWith('systems')) console.log('This book is about some systems, but definitely not about operating systems');
-}
-
-logBookTheme('as dfdf fdsfsd');
-logBookTheme('as dfdf');
+// function logBookTheme(title) {
+//   if (title.toLowerCase().startsWith('computer')) console.log('This book is about computers');
+//   else if (title.toLowerCase().includes('algorithms') && title.toLowerCase().includes('structures')) console.log('This book is about algorithms and data structures');
+//   else if (!title.toLowerCase().includes('operating') && title.endsWith('system') || title.endsWith('systems')) console.log('This book is about some systems, but definitely not about operating systems');
+// }
