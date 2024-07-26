@@ -94,16 +94,11 @@ const toSnakeCase = function (varNames) {
 
   for (const name of varNames) lowerCaseVar.push(name.toLowerCase().trim());
 
-  const snakeCaseVars = [];
-  for (const variable of lowerCaseVar) {
+  for (const [i, variable] of lowerCaseVar.entries()) {
     const [a, b] = variable.split("_");
     const snakeCase = a + b[0].toUpperCase() + b.slice(1);
-    snakeCaseVars.push(
-      snakeCase.padEnd(25) + "✅".repeat(snakeCaseVars.length + 1)
-    );
+    console.log(snakeCase.padEnd(25) + "✅".repeat(i + 1));
   }
-
-  for (const snake of snakeCaseVars) console.log(snake);
 };
 
 document.querySelector("button").addEventListener("click", function () {
