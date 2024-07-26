@@ -1440,3 +1440,13 @@ const getKeywordsAsString = function(books) {
 } 
 
 console.log(getKeywordsAsString(books));
+
+// 3.
+
+const bookChapters = [['The Basics', 14], ['Sorting', 254], ['Searching', 372], ['Graphs', 526], ['Strings', 706]];
+
+const logBookChapters = function(chapters) {
+  for (const chapter of chapters) console.log(chapter[0].padEnd(25, '_') + chapter[1]);
+}
+
+logBookChapters(bookChapters);
