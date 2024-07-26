@@ -82,6 +82,16 @@ console.log(capitalizeName(passenger));
 const message = 'Go to gate 23!';
 console.log(message.padStart(23, '+').padEnd(35, '+'));
 
+const maskCreditCard = function(number) {
+  const str = number + '';
+  const last = str.slice(-4);
+
+  return last.padStart(str.length, '*');
+}
+
+console.log(maskCreditCard(236423642386492364));
+console.log(maskCreditCard('0989678958956'));
+
 //
 // Strings pt 2
 //
