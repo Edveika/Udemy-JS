@@ -61,6 +61,12 @@ const restaurant = {
 // splits string into substr by + sign, returns arr
 console.log('a+very+nice+str'.split('+'));
 
+const [firstName, lastName] = 'Edvinas Kazkas'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+
+console.log(newName);
+
 //
 // Strings pt 2
 //
