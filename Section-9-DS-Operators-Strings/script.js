@@ -21,7 +21,7 @@ const logFlights = function(flights) {
     const event = flightData[0].replaceAll('_', ' ').trim();
     const from = flightData[1].slice(0,3);
     const to = flightData[2].slice(0,3);
-    const announcement = `${event.startsWith('Delayed') ? '🔴' : ''} ${event} from ${from.toUpperCase()} to ${to.toUpperCase()} (${flightData[3]})`;
+    const announcement = `${event.startsWith('Delayed') ? '🔴' : ''} ${event} from ${from.toUpperCase()} to ${to.toUpperCase()} (${flightData[3]})`.padStart(40);
     console.log(announcement);
   }
 }
